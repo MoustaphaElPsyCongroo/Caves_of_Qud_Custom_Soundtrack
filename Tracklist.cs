@@ -402,7 +402,7 @@ namespace Custom_Soundtrack.ManageTracks
                 {
                     Tracks =
                         new string[] { "Omonporch_DivinityOS2_ArxSquareAlt2" };
-                }
+                } //"Outskirts"
             } //---------- //RED ROCK //-----------
             else if (Z.DisplayName.Contains("Red Rock") && Z.Z <= 14)
             {
@@ -710,8 +710,8 @@ namespace Custom_Soundtrack.ManageTracks
                         new string[] {
                             "VillageStarting_WildARMs_IntoTheWilderness",
                             "VillageStarting_WildARMs_IntoTheWilderness",
-                            "VillageStarting_WildARMs_IntoTheWilderness",
                             "VillageStarting_TouhouGW_TheBulletReporter",
+                            "VillageStarting_ShirenMD1_CanyonHamlet",
                             "VillageStarting_TheLegendsOfHeroes_OpeningSize"
                         };
                 } // DESERT CANYON VILLAGE //
@@ -719,8 +719,8 @@ namespace Custom_Soundtrack.ManageTracks
                 {
                     Tracks =
                         new string[] {
-                            "VillageDesertCanyon_Persona5_BeneathTheMask",
-                            "VillageDesertCanyon_ShirenMD2_ShutenVillage"
+                            "VillageDesertCanyon_ShirenMD1DS_BambooVillage",
+                            "VillageDesertCanyon_ShirenMD1DS_MountaintopTown"
                         };
                 } // SALT DUNES VILLAGE //
                 else if (region == "Saltdunes")
@@ -1136,12 +1136,16 @@ namespace Custom_Soundtrack.ManageTracks
             ******************* WORLD MAP TERRAIN ***************
             *****************************************************
             */
-            else if (Z.Z <= 15)
+
+            if (Tracks == null && Z.Z <= 15)
             {
                 string region = Z.GetRegion();
 
                 // BANANA GROVE
-                if (region == "BananaGrove")
+                if (
+                    region == "BananaGrove" ||
+                    Z.DisplayName.Contains("banana grove")
+                )
                 {
                     // Surface
                     if (Z.Z == 10)
@@ -1164,7 +1168,10 @@ namespace Custom_Soundtrack.ManageTracks
                             };
                     }
                 } // BAROQUE RUINS
-                else if (region == "BaroqueRuins")
+                else if (
+                    region == "BaroqueRuins" ||
+                    Z.DisplayName.Contains("baroque ruins")
+                )
                 {
                     // Surface
                     if (Z.Z == 10)
@@ -1186,7 +1193,10 @@ namespace Custom_Soundtrack.ManageTracks
                             };
                     }
                 } // DEEP JUNGLE
-                else if (region == "DeepJungle")
+                else if (
+                    region == "DeepJungle" ||
+                    Z.DisplayName.Contains("deep jungle")
+                )
                 {
                     // Surface
                     if (Z.Z == 10)
@@ -1208,7 +1218,10 @@ namespace Custom_Soundtrack.ManageTracks
                             };
                     }
                 } // DESERT CANYON
-                else if (region == "DesertCanyon")
+                else if (
+                    region == "DesertCanyon" ||
+                    Z.DisplayName.Contains("desert canyon")
+                )
                 {
                     // Surface
                     if (Z.Z == 10)
@@ -1230,7 +1243,10 @@ namespace Custom_Soundtrack.ManageTracks
                             };
                     }
                 } // FLOWER FIELDS
-                else if (region == "Flowerfields")
+                else if (
+                    region == "Flowerfields" ||
+                    Z.DisplayName.Contains("flower fields")
+                )
                 {
                     // Surface
                     if (Z.Z == 10)
@@ -1251,7 +1267,7 @@ namespace Custom_Soundtrack.ManageTracks
                             };
                     }
                 } // HILLS
-                else if (region == "Hills")
+                else if (region == "Hills" || Z.DisplayName.Contains("hills"))
                 {
                     // Surface
                     if (Z.Z == 10)
@@ -1273,7 +1289,8 @@ namespace Custom_Soundtrack.ManageTracks
                             };
                     }
                 } // JUNGLE
-                else if (region == "Jungle")
+                else if (region == "Jungle" || Z.DisplayName.Contains("jungle")
+                )
                 {
                     // Surface
                     if (Z.Z == 10)
@@ -1291,7 +1308,9 @@ namespace Custom_Soundtrack.ManageTracks
                             new string[] { "Jungle_PSMD_LushForestRemix" };
                     }
                 } // LAKE HINNOM
-                else if (region == "LakeHinnom")
+                else if (
+                    region == "LakeHinnom" || Z.DisplayName.Contains("Hinnom")
+                )
                 {
                     // Surface
                     if (Z.Z == 10)
@@ -1312,7 +1331,9 @@ namespace Custom_Soundtrack.ManageTracks
                             };
                     }
                 } // MOON STAIR
-                else if (region == "MoonStair")
+                else if (
+                    region == "MoonStair" || Z.DisplayName.Contains("Stair")
+                )
                 {
                     // Surface
                     if (Z.Z == 10)
@@ -1333,7 +1354,10 @@ namespace Custom_Soundtrack.ManageTracks
                             };
                     }
                 } // MOUNTAINS
-                else if (region == "Mountains")
+                else if (
+                    region == "Mountains" ||
+                    Z.DisplayName.Contains("mountains")
+                )
                 {
                     // Surface
                     if (Z.Z == 10)
@@ -1354,7 +1378,9 @@ namespace Custom_Soundtrack.ManageTracks
                             };
                     }
                 } // PALLADIUM REEF
-                else if (region == "PalladiumReef")
+                else if (
+                    region == "PalladiumReef" || Z.DisplayName.Contains("Reef")
+                )
                 {
                     // Surface
                     if (Z.Z == 10)
@@ -1375,7 +1401,10 @@ namespace Custom_Soundtrack.ManageTracks
                             };
                     }
                 } // RAINBOW WOOD
-                else if (region == "Fungal")
+                else if (
+                    region == "Fungal" ||
+                    Z.DisplayName.Contains("Rainbow Wood")
+                )
                 {
                     // Surface
                     if (Z.Z == 10)
@@ -1396,7 +1425,7 @@ namespace Custom_Soundtrack.ManageTracks
                             };
                     }
                 } // RIVERS
-                else if (region == "Water")
+                else if (region == "Water" || Z.DisplayName.Contains("river"))
                 {
                     // Surface
                     if (Z.Z == 10)
@@ -1418,7 +1447,7 @@ namespace Custom_Soundtrack.ManageTracks
                             };
                     }
                 } // RUINS
-                else if (region == "ruins")
+                else if (region == "ruins" || Z.DisplayName.Contains("ruins"))
                 {
                     // Surface
                     if (Z.Z == 10)
@@ -1438,7 +1467,10 @@ namespace Custom_Soundtrack.ManageTracks
                             };
                     }
                 } // SALT DUNES
-                else if (region == "Saltdunes")
+                else if (
+                    region == "Saltdunes" ||
+                    Z.DisplayName.Contains("salt desert")
+                )
                 {
                     // Surface
                     if (Z.Z == 10)
@@ -1459,7 +1491,10 @@ namespace Custom_Soundtrack.ManageTracks
                             };
                     }
                 } // SALT MARSH
-                else if (region == "Saltmarsh")
+                else if (
+                    region == "Saltmarsh" ||
+                    Z.DisplayName.Contains("salt marsh")
+                )
                 {
                     // Surface
                     if (Z.Z == 10)
