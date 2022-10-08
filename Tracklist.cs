@@ -25,7 +25,7 @@ namespace Custom_Soundtrack.ManageTracks
 
         private static DateTime maxTime;
 
-        public double tracksMinSeconds = 55;
+        public double tracksMinSeconds = 50;
 
         private string isSameTrack = null;
 
@@ -47,7 +47,7 @@ namespace Custom_Soundtrack.ManageTracks
                 {
                     Tracks =
                         new string[] {
-                            "AsphaltMines_BindingOfIsaacRep_Fissure_Mines"
+                            "AsphaltMines_BindingOfIsaacRepentance_Fissure"
                         };
                 } //Ancient Bones
                 else if (Z.Z == 15)
@@ -87,9 +87,9 @@ namespace Custom_Soundtrack.ManageTracks
                     as an easter egg */
                     Tracks =
                         new string[] {
-                            "AsphaltMines_BindingOfIsaacAnti_Flashpoint_BBasement",
+                            "AsphaltMines_BindingOfIsaacAntibirth_Flashpoint_BBasement",
                             "AsphaltMines_ChocoboEB_GuardianDarkness",
-                            "AsphaltMines_BindingOfIsaacAnti_Flashpoint_BBasement",
+                            "AsphaltMines_BindingOfIsaacAntibirth_Flashpoint_BBasement",
                             "AsphaltMines_ChocoboEB_GuardianDarkness",
                             "AsphaltMines_PMDBRT_MagmaCavernPitRemix"
                         };
@@ -340,15 +340,15 @@ namespace Custom_Soundtrack.ManageTracks
                 {
                     Tracks =
                         new string[] {
-                            "Golgotha_BindingOfIsaacRep_NightSoil_Dross"
+                            "Golgotha_BindingOfIsaacRepentance_NightSoil_Dross"
                         };
                 } //Trash Chutes 2 - 4
                 else if (Z.Z <= 14)
                 {
                     Tracks =
                         new string[] {
-                            "Golgotha_BindingOfIsaacRep_NightSoil_Dross",
-                            "Golgotha_BindingOfIsaacAnti_HallowedGround_Downpour"
+                            "Golgotha_BindingOfIsaacRepentance_NightSoil_Dross",
+                            "Golgotha_BindingOfIsaacAntibirth_HallowedGround_Downpour"
                         };
                 } //Cloaca
                 else if (Z.Z == 15)
@@ -493,10 +493,10 @@ namespace Custom_Soundtrack.ManageTracks
                 toPatch = "yes";
                 Tracks =
                     new string[] {
-                        "Stiltgrounds_BindingOfIsaacReb_EverlastingHymn",
-                        "Stiltgrounds_BindingOfIsaacReb_EverlastingHymn",
-                        "Stiltgrounds_BindingOfIsaacWL_LamentOfTheAngel",
-                        "Stiltgrounds_BindingOfIsaacAnti_TheThief"
+                        "Stiltgrounds_BindingOfIsaacRebirth_EverlastingHymn",
+                        "Stiltgrounds_BindingOfIsaacRebirth_EverlastingHymn",
+                        "Stiltgrounds_BindingOfIsaacWrathOfLamb_LamentOfTheAngel",
+                        "Stiltgrounds_BindingOfIsaacAntibirth_TheThief"
                     };
             } //---------- //SIX DAY STILT //-----------
             else if (Z.DisplayName.Contains("Six Day Stilt"))
@@ -576,7 +576,7 @@ namespace Custom_Soundtrack.ManageTracks
                     {
                         Tracks =
                             new string[] {
-                                "TombOfTheEaters_BindingOfIsaacAnti_MachineInTheWalls",
+                                "TombOfTheEaters_BindingOfIsaacAntibirth_MachineInTheWalls",
                                 "TombOfTheEaters_CastlevaniaDawnofSorrow_LePinacle"
                             };
                     }
@@ -642,7 +642,11 @@ namespace Custom_Soundtrack.ManageTracks
             {
                 toPatch = "yes";
                 Tracks =
-                    new string[] { "ThinWorld_PMDRTDX_DreamEater", "default" };
+                    new string[] {
+                        "ThinWorld_BindingOfIsaacRepented_GuardiansGift",
+                        "ThinWorld_BindingOfIsaacRepented_GuardiansGift",
+                        "default"
+                    };
             } //---------- //TREMBLING DUNES //-----------
             else if (Z.DisplayName.Contains("Trembling Dunes") && Z.Z <= 12)
             {
@@ -1098,7 +1102,8 @@ namespace Custom_Soundtrack.ManageTracks
                         new string[] {
                             "HistoricSite3_FairyTailEnding_LonelyPerson",
                             "HistoricSite3_TheLegendOfHeroes_TheWhereaboutsOfTheStars",
-                            "HistoricSite3_FinalFantasy10HD_YunasDecision"
+                            "HistoricSite3_FinalFantasy10HD_YunasDecision",
+                            "RuinsRegion_TalesOfMajEyal_Mystery"
                         };
                 } // THIRD PERIOD, TIERS 5-6: BANANA GROVE, DEEP JUNGLE
                 else if (Z.NewTier <= 6)
@@ -1153,7 +1158,6 @@ namespace Custom_Soundtrack.ManageTracks
                         Tracks =
                             new string[] {
                                 "BananaGrove_ZeldaOOT_GerudoValleyRemastered",
-                                "BananaGrove_ZeldaOOT_GerudoValleyRemastered2",
                                 "BananaGrove_PokemonSunMoon_VastPoniCanyon",
                                 "BananaGrove_TouhouGW_WelcomeToYoukaiTemple"
                             };
@@ -1180,7 +1184,8 @@ namespace Custom_Soundtrack.ManageTracks
                             new string[] {
                                 "BaroqueRuins_TouhouGW_MysticDream~SnowOrCherryPetal",
                                 "BaroqueRuins_Elona_Dungeon14",
-                                "BaroqueRuins_PSMD_PrehistoricRuins"
+                                "BaroqueRuins_PSMD_PrehistoricRuins",
+                                "BaroqueRuins_BindingOfIsaacRepented_Crevice"
                             };
                     } // Subterranean Baroque Ruins
                     else
@@ -1205,7 +1210,8 @@ namespace Custom_Soundtrack.ManageTracks
                             new string[] {
                                 "DeepJungle_PMDSky_TreeshroudForest",
                                 "DeepJungle_ForebodingForest",
-                                "DeepJungle_TheLegendOfHeroes_TetracyclicTower"
+                                "DeepJungle_TheLegendOfHeroes_TetracyclicTower",
+                                "DeepJungle_BindingOfIsaacRepented_AqueousSorrow"
                             };
                     } // Subterranean Deep Jungle
                     else
@@ -1299,13 +1305,18 @@ namespace Custom_Soundtrack.ManageTracks
                             new string[] {
                                 "Jungle_TouhouGW_RetrospectiveKyoto.",
                                 "Jungle_TouhouGW_MagusNight",
-                                "Jungle_PSMD_LushForest"
+                                "Jungle_PSMD_LushForest",
+                                "Jungle_BindingOfIsaacRepented_Agony"
                             };
                     } // Subterranean Jungle
                     else
                     {
                         Tracks =
-                            new string[] { "Jungle_PSMD_LushForestRemix" };
+                            new string[] {
+                                "Jungle_PSMD_LushForestRemix",
+                                "Jungle_BindingOfIsaacExcelsior_SixFeetUnder",
+                                "Jungle_BindingOfIsaacRepented_Agony"
+                            };
                     }
                 } // LAKE HINNOM
                 else if (
@@ -1319,7 +1330,8 @@ namespace Custom_Soundtrack.ManageTracks
                             new string[] {
                                 "LakeHinnom_TouhouGW_DancingWaterDrops",
                                 "LakeHinnom_DonkeyKongCountry_AquaticAmbience",
-                                "LakeHinnom_PMDBRT_MtFreezeRemastered"
+                                "LakeHinnom_PMDBRT_MtFreezeRemastered",
+                                "LakeHinnom_BindingOfIsaacRepented_Torrent"
                             };
                     } // Subterranean Lake Hinnom
                     else
@@ -1342,7 +1354,8 @@ namespace Custom_Soundtrack.ManageTracks
                             new string[] {
                                 "MoonStair_FinalFantasy7_YouCanHearTheCryOfThePlanetRemix",
                                 "MoonStair_FinalFantasy7_ThoseChosenByThePlanetRemastered",
-                                "BethesdaSusa_PSMD_TreeofLifeTrunk"
+                                "BethesdaSusa_PSMD_TreeofLifeTrunk",
+                                "default"
                             };
                     } // Subterranean stair
                     else
@@ -1374,7 +1387,8 @@ namespace Custom_Soundtrack.ManageTracks
                         Tracks =
                             new string[] {
                                 "Mountains_PMDRRT_MtThunder",
-                                "Mountains_PMDGTI_IllusoryHazyPass"
+                                "Mountains_PMDGTI_IllusoryHazyPass",
+                                "Mountains_PMDGTI_Holehills"
                             };
                     }
                 } // PALLADIUM REEF
@@ -1397,7 +1411,8 @@ namespace Custom_Soundtrack.ManageTracks
                         Tracks =
                             new string[] {
                                 "PalladiumReef_Elona_Dungeon1-5",
-                                "PalladiumReef_PMDBRT_MtFreezePeak"
+                                "PalladiumReef_PMDBRT_MtFreezePeak",
+                                "PalladiumReef_PSMD_DepthsOfTheSubmergedCave"
                             };
                     }
                 } // RAINBOW WOOD
@@ -1413,7 +1428,8 @@ namespace Custom_Soundtrack.ManageTracks
                             new string[] {
                                 "RainbowWood_Tangledeep_MiraiTheHeroine",
                                 "RainbowWood_Tangledeep_MysteriesOfTime",
-                                "RainbowWood_Elona_Dungeon6-10"
+                                "RainbowWood_Elona_Dungeon6-10",
+                                "RainbowWood_BindingOfIsaacAntibirth_JourneyFromAJarToTheSky"
                             };
                     } // Subterranean Rainbow Wood
                     else
@@ -1421,7 +1437,8 @@ namespace Custom_Soundtrack.ManageTracks
                         Tracks =
                             new string[] {
                                 "RainbowWood_Elona_Dungeon5-9",
-                                "RainbowWood_DivinityOS2_MaraisExsanguesFortJoyBridge"
+                                "RainbowWood_DivinityOS2_MaraisExsanguesFortJoyBridge",
+                                "RainbowWood_BindingOfIsaacRepentance_Stargazer"
                             };
                     }
                 } // RIVERS
@@ -1434,7 +1451,8 @@ namespace Custom_Soundtrack.ManageTracks
                             new string[] {
                                 "Rivers_CastlevaniaCurseOfDarkness_MortviaFountain",
                                 "Rivers_NieRAutomata_CityRuinsRaysOfLightVocal",
-                                "Rivers_FinalFantasy10HD_SilenceBeforeTheStorm"
+                                "Rivers_FinalFantasy10HD_SilenceBeforeTheStorm",
+                                "Rivers_BindingOfIsaacRepented_ParishedExistence"
                             };
                     } // Subterranean rivers
                     else
@@ -1456,14 +1474,16 @@ namespace Custom_Soundtrack.ManageTracks
                             new string[] {
                                 "RuinsRegion_PMDGTI_TyrianMazeInnerChamber",
                                 "RuinsRegion_PMDRRT_BuriedRelic",
-                                "RuinsRegion_CastlevaniaDawnOfSorrow_MinesAbandonnées"
+                                "RuinsRegion_CastlevaniaDawnOfSorrow_MinesAbandonnées",
+                                "RuinsRegion_BindingOfIsaacRepented_Sepulchre"
                             };
                     } // Subterranean Ruins
                     else
                     {
                         Tracks =
                             new string[] {
-                                "RuinsRegion_TalesOfMajEyal_Mystery"
+                                "RuinsRegion_TalesOfMajEyal_Mystery",
+                                "RuinsRegion_PMDGTI_TyrianMazeInnerChamber"
                             };
                     }
                 } // SALT DUNES
@@ -1479,7 +1499,8 @@ namespace Custom_Soundtrack.ManageTracks
                             new string[] {
                                 "SaltDesert_PMDSky_QuicksandPit",
                                 "SaltDesert_PMDSky_NorthernDesert",
-                                "SaltDesert_PMDGTI_WitheredSavannah"
+                                "SaltDesert_PMDGTI_WitheredSavannah",
+                                "SaltDesert_BindingOfIsaacRepented_Predicament"
                             };
                     } // Subterranean desert
                     else
@@ -1487,7 +1508,8 @@ namespace Custom_Soundtrack.ManageTracks
                         Tracks =
                             new string[] {
                                 "SaltDesert_Persona5_WhenMotherWasThere",
-                                "SaltDesert_PMDGTI_ScorchingDesert"
+                                "SaltDesert_PMDGTI_ScorchingDesert",
+                                "SaltDesert_PMDSky_QuicksandPit"
                             };
                     }
                 } // SALT MARSH
@@ -1504,7 +1526,8 @@ namespace Custom_Soundtrack.ManageTracks
                                 "SaltMarsh_TouhouGW_FragrantPlants",
                                 "SaltMarsh_PSMD_PoliwrathRiver",
                                 "SaltMarsh_PSMD_SchoolForest",
-                                "SaltMarsh_PMDSky_FoggyForest"
+                                "SaltMarsh_PMDSky_FoggyForest",
+                                "SaltMarsh_BindingOfIsaacRepented_LostInGuilt"
                             };
                     } // Subterranean marsh
                     else
@@ -1512,7 +1535,8 @@ namespace Custom_Soundtrack.ManageTracks
                         Tracks =
                             new string[] {
                                 "SaltMarsh_PSMD_NoeTown",
-                                "LakeHinnom_EtrianMD_WaterfallWoodlands"
+                                "LakeHinnom_EtrianMD_WaterfallWoodlands",
+                                "SaltMarsh_BindingOfIsaacRepented_LostInGuilt"
                             };
                     }
                 }
@@ -1530,8 +1554,9 @@ namespace Custom_Soundtrack.ManageTracks
                         new string[] {
                             "Underground_PMDRRT_SilentChasm",
                             "TombOfTheEaters_CastlevaniaDawnofSorrow_LePinacle",
-                            "Underground_BindingOfIsaacWoTl_Sacrificial",
-                            "Underground_BindingOfIsaacWoTl_AMournerUntoSheol"
+                            "Underground_BindingOfIsaacWrathOfTheLamb_Sacrificial",
+                            "Underground_BindingOfIsaacWrathOfTheLamb_AMournerUntoSheol",
+                            "RuinsRegion_TalesOfMajEyal_Mystery"
                         };
                 } // Tier 3
                 else if (Z.NewTier == 3)
@@ -1541,8 +1566,8 @@ namespace Custom_Soundtrack.ManageTracks
                             "Underground_PMDRRT_FrostyGrotto",
                             "Underground_CastlevaniaCurseOfDarkness_AiolonCaveTemple",
                             "HistoricSite2_BindingOfIsaacExcelsior_Ascent",
-                            "Underground_BindingOfIsaacExcelsior_SixFeetUnder",
-                            "Ruins_PMDRRT_MtThunderPeak"
+                            "Ruins_PMDRRT_MtThunderPeak",
+                            "Underground_BindingOfIsaacRepented_DesolateAbyss"
                         };
                 } // Tier 4
                 else if (Z.NewTier == 4)
@@ -1551,7 +1576,7 @@ namespace Custom_Soundtrack.ManageTracks
                         new string[] {
                             "TombOfTheEaters_CastlevaniaDawnOfSorrow_CondemnedTower",
                             "RainbowWood_Tangledeep_MysteriesOfTime",
-                            "Underground_BindingOfIsaacAnti_Morphine",
+                            "Underground_BindingOfIsaacAntibirth_Morphine",
                             "TombOfTheEaters_PMDSky_SealedRuin"
                         };
                 } // Tier 5
