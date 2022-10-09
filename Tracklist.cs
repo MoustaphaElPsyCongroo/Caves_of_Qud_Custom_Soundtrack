@@ -1240,7 +1240,8 @@ namespace Custom_Soundtrack.ManageTracks
                             new string[] {
                                 "DesertCanyon_TouhouGW_HiganRetour~RiversideView",
                                 "DesertCanyon_PMDSky_MtHorn",
-                                "DesertCanyon_PMDGTI_StompstumpPeak"
+                                "DesertCanyon_PMDGTI_StompstumpPeak",
+                                "DesertCanyon_PMDBRT_GreatCanyonRemastered"
                             };
                     } // Subterranean Desert Canyon
                     else
@@ -1248,7 +1249,8 @@ namespace Custom_Soundtrack.ManageTracks
                         Tracks =
                             new string[] {
                                 "DesertCanyon_PMDSky_AmpPlains",
-                                "RustWells_ShirenMD1DS_TaintedPath"
+                                "RustWells_ShirenMD1DS_TaintedPath",
+                                "DesertCanyon_PMDBRT_GreatCanyonRemix"
                             };
                     }
                 } // FLOWER FIELDS
