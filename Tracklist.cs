@@ -493,7 +493,7 @@ namespace Custom_Soundtrack.ManageTracks
                     new string[] {
                         "Stiltgrounds_BindingOfIsaacRebirth_EverlastingHymn",
                         "Stiltgrounds_BindingOfIsaacRebirth_EverlastingHymn",
-                        "Stiltgrounds_BindingOfIsaacWrathOfLamb_LamentOfTheAngel",
+                        "Stiltgrounds_BindingOfIsaacWrathOfTheLamb_LamentOfTheAngel",
                         "Stiltgrounds_BindingOfIsaacAntibirth_TheThief"
                     };
             } //---------- //SIX DAY STILT //-----------
@@ -711,12 +711,14 @@ namespace Custom_Soundtrack.ManageTracks
                     Tracks =
                         new string[] {
                             "VillageStarting_WildARMs_IntoTheWilderness",
+                            "VillageStarting_WildARMs_IntoTheWilderness",
                             "VillageStarting_TouhouGW_TheBulletReporter",
                             "VillageStarting_WildARMs_IntoTheWilderness",
                             "VillageStarting_PMDGTI_Opening",
                             "VillageStarting_TheLegendsOfHeroes_OpeningSize",
                             "VillageStarting_WildARMs_IntoTheWilderness",
-                            "VillageStarting_BindingOfIsaacWrathOfTheLamb_Opening"
+                            "VillageStarting_BindingOfIsaacWrathOfTheLamb_Opening",
+                            "VillageStarting_BindingOfIsaacAntibirth_Descent"
                         };
                 } // DESERT CANYON VILLAGE //
                 else if (region == "DesertCanyon")
