@@ -1552,7 +1552,7 @@ namespace Custom_Soundtrack.ManageTracks
             ********************* UNDERGROUND *******************
             *****************************************************
             */
-            else if (Z.Z >= 16)
+            else if (Tracks == null && Z.Z >= 16)
             {
                 // Tier 2 (Formula starts at 2)
                 if (Z.NewTier == 2)
