@@ -726,7 +726,7 @@ namespace Custom_Soundtrack.ManageTracks
                     Tracks =
                         new string[] {
                             "VillageDesertCanyon_ZeldaOcarinaOfTime_KakarikoVillage",
-                            "VillageDesertCanyon_FinalFantasy7_TifaTheme"
+                            "VillageDesertCanyon_PokemonSunMoon_RanchOhana"
                         };
                 } // SALT DUNES VILLAGE //
                 else if (region == "Saltdunes")
@@ -776,7 +776,8 @@ namespace Custom_Soundtrack.ManageTracks
                 {
                     Tracks =
                         new string[] {
-                            "VillageRainbowWood_BradWhitePierreGill_Lullaby"
+                            "VillageRainbowWood_BradWhitePierreGill_Lullaby",
+                            "VillageRainbowWood_BindingOfIsaacAntibirth_JourneyFromAJarToTheSky"
                         };
                 } // LAKE HINNOM VILLAGE
                 else if (region == "LakeHinnom")
@@ -906,7 +907,7 @@ namespace Custom_Soundtrack.ManageTracks
                         new string[] {
                             "LairMerchant_ShirenMD2_Track8",
                             "LairMerchant_DivinityOS2_RedPrinceTheme",
-                            "LairMerchant_ShirenMD5_MonsterHouseSpecial"
+                            "LairMerchant_PSMD_DrilburCoalMine"
                         };
                 } // TIER (0-)1: SALT MARSHES, DESERT CANYONS //
                 else if (Z.NewTier <= 1)
@@ -985,7 +986,10 @@ namespace Custom_Soundtrack.ManageTracks
                 } // Strata 6-8
                 else if (Z.Z <= 18)
                 {
-                    Tracks = new string[] { "LairOboroqoru_PMDRTDX_SkyTower" };
+                    Tracks =
+                        new string[] {
+                            "LairOboroqoru_PMDRTDX_SkyTowerRemastered"
+                        };
                 } // Strata 9: Oboroqoru's floor
                 else if (Z.Z == 19)
                 {
@@ -1081,7 +1085,7 @@ namespace Custom_Soundtrack.ManageTracks
                             "HistoricSite5-2_ShirenMD3_CentipedesDen",
                             "HistoricSite5-2_ShirenMD3_InnerKarakuriMansion",
                             "HistoricSite5-2_ShirenMD3_InnerKarakuriMansion",
-                            "HistoricSite5-2_PSMD_SandDuneOfSpirits"
+                            "HistoricSite5-2_PMDRRT_GreatCanyon"
                         };
                 } // FOURTH PERIOD, TIERS 3-4 //
                 else if (Z.NewTier <= 4)
@@ -1362,6 +1366,7 @@ namespace Custom_Soundtrack.ManageTracks
                                 "MoonStair_FinalFantasy7_YouCanHearTheCryOfThePlanetRemix",
                                 "MoonStair_FinalFantasy7_ThoseChosenByThePlanetRemastered",
                                 "BethesdaSusa_PSMD_TreeofLifeTrunk",
+                                "MoonStair_BindingOfIsaacRepented_Incision",
                                 "default"
                             };
                     } // Subterranean stair
@@ -1370,7 +1375,8 @@ namespace Custom_Soundtrack.ManageTracks
                         Tracks =
                             new string[] {
                                 "MoonStair_FinalFantasy7_ThoseChosenByThePlanetRemastered2",
-                                "MoonStair_PMDBRT_MtThunderPeakRemastered"
+                                "MoonStair_PMDBRT_MtThunderPeakRemastered",
+                                "BethesdaSusa_PSMD_TreeofLifeTrunk"
                             };
                     }
                 } // MOUNTAINS
@@ -1435,8 +1441,7 @@ namespace Custom_Soundtrack.ManageTracks
                             new string[] {
                                 "RainbowWood_Tangledeep_MiraiTheHeroine",
                                 "RainbowWood_Tangledeep_MysteriesOfTime",
-                                "RainbowWood_Elona_Dungeon6-10",
-                                "RainbowWood_BindingOfIsaacAntibirth_JourneyFromAJarToTheSky"
+                                "RainbowWood_Elona_Dungeon6-10"
                             };
                     } // Subterranean Rainbow Wood
                     else
@@ -1514,6 +1519,7 @@ namespace Custom_Soundtrack.ManageTracks
                     {
                         Tracks =
                             new string[] {
+                                "TremblingDunes_PMDSky_UpperSteamCave",
                                 "SaltDesert_Persona5_WhenMotherWasThere",
                                 "SaltDesert_PMDGTI_ScorchingDesert",
                                 "SaltDesert_PMDSky_QuicksandPit"
@@ -1604,7 +1610,6 @@ namespace Custom_Soundtrack.ManageTracks
                             "Underground_FinalFantasy4Advance_Zeromus",
                             "BethesdaSusa_Bandit_Tangledeep",
                             "BethesdaSusa_PMDSky_SkyPeakSnowfield",
-                            "EynRoj_PMDBRT_SkyTower",
                             "Underground_PMDSky_SealedRuinPit",
                             "AsphaltMines_PMDBRT_MtBlazeRemix"
                         };
@@ -1698,7 +1703,8 @@ namespace Custom_Soundtrack.ManageTracks
                     "tarry ",
                     "rusty ",
                     "rust-shrouded ",
-                    "subterranean "
+                    "subterranean ",
+                    "outskirts "
                 };
                 foreach (string modifier in zoneModifiers)
                 {
@@ -1706,9 +1712,10 @@ namespace Custom_Soundtrack.ManageTracks
                 }
 
                 /*
-                We only want to save the previous Track when the character
-                stays on the same location. If character goes to another
-                location, clear the previous Track.
+                If a track have been playing for less than tracksMinSeconds
+                seconds, save it and continue playing it. Also we only want to
+                save it when the character stays on the same location. If
+                character goes to another location, clear the previous Track.
                 */
                 if (previousZone != null)
                 {
