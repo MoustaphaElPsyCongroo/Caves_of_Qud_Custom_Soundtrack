@@ -1212,7 +1212,6 @@ namespace Custom_Soundtrack.ManageTracks
                         Tracks =
                             new string[] {
                                 "BaroqueRuins_Elona_Dungeon14",
-                                "BaroqueRuins_PSMD_PrehistoricRuins",
                                 "Underground_Elona_Dungeon15"
                             };
                     }
@@ -1323,7 +1322,7 @@ namespace Custom_Soundtrack.ManageTracks
                     {
                         Tracks =
                             new string[] {
-                                "Jungle_TouhouGW_RetrospectiveKyoto.",
+                                "Jungle_TouhouGW_RetrospectiveKyoto",
                                 "Jungle_TouhouGW_MagusNight",
                                 "Jungle_PSMD_LushForest",
                                 "Jungle_BindingOfIsaacRepented_Agony"
@@ -1530,8 +1529,7 @@ namespace Custom_Soundtrack.ManageTracks
                             new string[] {
                                 "TremblingDunes_PMDSky_UpperSteamCave",
                                 "SaltDesert_Persona5_WhenMotherWasThere",
-                                "SaltDesert_PMDGTI_ScorchingDesert",
-                                "SaltDesert_PMDSky_QuicksandPit"
+                                "SaltDesert_PMDGTI_ScorchingDesert"
                             };
                     }
                 } // SALT MARSH
