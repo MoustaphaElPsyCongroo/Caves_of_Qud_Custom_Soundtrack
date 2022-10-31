@@ -366,8 +366,8 @@ namespace Custom_Soundtrack.ManageTracks
                 Tracks =
                     new string[] {
                         "Joppa_Haffner_Dom",
-                        "Joppa_Haffner_Dom",
-                        "default"
+                        "default",
+                        "Joppa_Haffner_Dom"
                     };
             } //---------- //RUINS OF JOPPA / ABANDONED JOPPA //-----------
             else if (
@@ -419,7 +419,7 @@ namespace Custom_Soundtrack.ManageTracks
                 else if (Z.Z == 12)
                 {
                     Tracks =
-                        new string[] { "RedRock_ShirenMD2_Table Mountain1" };
+                        new string[] { "RedRock_ShirenMD2_TableMountain1" };
                 } //Stratum 3
                 else if (Z.Z == 13)
                 {
@@ -492,8 +492,8 @@ namespace Custom_Soundtrack.ManageTracks
                 Tracks =
                     new string[] {
                         "Stiltgrounds_BindingOfIsaacRebirth_EverlastingHymn",
-                        "Stiltgrounds_BindingOfIsaacRebirth_EverlastingHymn",
                         "Stiltgrounds_BindingOfIsaacWrathOfTheLamb_LamentOfTheAngel",
+                        "Stiltgrounds_BindingOfIsaacRebirth_EverlastingHymn",
                         "Stiltgrounds_BindingOfIsaacAntibirth_TheThief"
                     };
             } //---------- //SIX DAY STILT //-----------
@@ -501,7 +501,7 @@ namespace Custom_Soundtrack.ManageTracks
             {
                 Tracks =
                     new string[] {
-                        "SixDayStilts_DivinityOS2_Temple",
+                        "SixDayStilt_DivinityOS2_Temple",
                         "SixDayStilt_Elona_ShrineOfGuardian"
                     };
             } //---------- //THE HYDROPON //-----------
@@ -664,7 +664,10 @@ namespace Custom_Soundtrack.ManageTracks
             else if (Z.DisplayName.Contains("waterlogged tunnel"))
             {
                 Tracks =
-                    new string[] { "WaterloggedTunnel_PMDSky_WaterfallCave" };
+                    new string[] {
+                        "WaterloggedTunnel_PMDSky_WaterfallCave",
+                        "RuinsRegion_TalesOfMajEyal_Mystery"
+                    };
             } //---------- //YD FREEHOLD //-----------
             else if (Z.DisplayName.Contains("Yd Freehold"))
             {
@@ -751,6 +754,7 @@ namespace Custom_Soundtrack.ManageTracks
                 {
                     Tracks =
                         new string[] {
+                            "VillageHills_FinalFantasy6PR_KidsRunThroughTheCityCorner",
                             "VillageHills_PokemonBW2_VillageBridge",
                             "VillageHills_FinalFantasy6PR_KidsRunThroughTheCityCorner"
                         };
@@ -760,7 +764,8 @@ namespace Custom_Soundtrack.ManageTracks
                     Tracks =
                         new string[] {
                             "VillageRivers_Bach_AirOnTheGString",
-                            "VillageRivers_PokemonORAS_OceanicMuseum"
+                            "VillageRivers_PokemonORAS_OceanicMuseum",
+                            "VillageRivers_Bach_AirOnTheGString"
                         };
                 } // BANANA GROVE VILLAGE //
                 else if (region == "BananaGrove")
@@ -841,7 +846,8 @@ namespace Custom_Soundtrack.ManageTracks
                     Tracks =
                         new string[] {
                             "VillageBaroqueRuins_DivinityOS2_MysteriousTrails",
-                            "VillageBaroqueRuins_JimmyThackery_TheBarbersGuitar"
+                            "VillageBaroqueRuins_JimmyThackery_TheBarbersGuitar",
+                            "VillageBaroqueRuins_DivinityOS2_MysteriousTrails"
                         };
                 } // MOON STAIR VILLAGE //
                 else if (region == "MoonStair")
@@ -866,8 +872,10 @@ namespace Custom_Soundtrack.ManageTracks
                         "GoatfolkVillage_DivinityOS2_FortJoyBattleBansuri",
                         "GoatfolkVillage_FinalFantasy4_Boss",
                         "GoatfolkVillage_PokemonOrigins_WildBattle",
+                        "GoatfolkVillage_DivinityOS2_FortJoyBattleBansuri",
                         "GoatfolkVillage_PokemonBW_GymLeaderBattle",
-                        "GoatfolkVillage_PokemonDPP_TeamGalaxyAdminBattle"
+                        "GoatfolkVillage_PokemonDPP_TeamGalaxyAdminBattle",
+                        "GoatfolkVillage_DivinityOS2_FortJoyBattleBansuri"
                     };
             } // GOATFOLK HAUNTS //
             else if (Z.HasBuilder("GoatfolkQlippothYurts"))
@@ -936,8 +944,8 @@ namespace Custom_Soundtrack.ManageTracks
                         new string[] {
                             "Lair3-4_FinalFantasy15_StandYourGround",
                             "Lair3-4-7_FinalFantasy8_DontBeAfraid",
-                            "Lair3-4-7_FinalFantasy8_DontBeAfraid",
                             "Lair3-4_Bleach_FadeToBlackB13a",
+                            "Lair3-4-7_FinalFantasy8_DontBeAfraid",
                             "Lair3-4_BindingOfIsaacAntibirth_Allnoise"
                         };
                 } // TIERS 5-6: RAINBOW WOODS, LAKE HINNOM, BANANA GROVE, DEEP JUNGLE //
@@ -945,6 +953,9 @@ namespace Custom_Soundtrack.ManageTracks
                 {
                     Tracks =
                         new string[] {
+                            "Lair5-6_PMDSky_SpacialCliffs",
+                            "Lair5-6_PMDSky_DarkWasteland",
+                            "Lair5-6_PMDSky_IcicleForest",
                             "Lair5-6_PMDSky_SpacialCliffs",
                             "Lair5-6_PMDSky_DarkWasteland",
                             "Lair5-6_PMDSky_IcicleForest",
@@ -1018,7 +1029,6 @@ namespace Custom_Soundtrack.ManageTracks
                     Tracks =
                         new string[] {
                             "Ruins_WildARMs_AfterTheChaosAndDestruction",
-                            "Ruins_FinalFantasy7_AnxiousHeart",
                             "Ruins_FinalFantasy7_AnxiousHeart"
                         };
                 } // TIERS 3-4: JUNGLES, RUINS, RIVERS, MOUNTAINS //
@@ -1035,7 +1045,7 @@ namespace Custom_Soundtrack.ManageTracks
                 {
                     Tracks =
                         new string[] {
-                            "Ruins_WildARMs_AfterTheChaosAndDestruction",
+                            "Ruins_WildARMsAF_AfterTheChaosAndDestruction",
                             "Ruins_PMDSky_HiddenHighlandRemastered",
                             "Ruins_PMDSky_HiddenHighlandRemastered",
                             "Ruins_Bleach_NothingCanBeExplained"
@@ -1046,7 +1056,6 @@ namespace Custom_Soundtrack.ManageTracks
                     Tracks =
                         new string[] {
                             "Ruins_PSMD_Voidlands",
-                            "Ruins_WildARMsAF_AfterTheChaosAndDestruction",
                             "Ruins_PMDSky_DeepDarkCraterRemastered",
                             "Ruins_PSMD_Voidlands"
                         };
@@ -1622,7 +1631,8 @@ namespace Custom_Soundtrack.ManageTracks
                             "Underground_FinalFantasy4SNES_LunarSubterrane",
                             "AsphaltMines_ChocoboEB_GuardianDarkness",
                             "BethesdaSusa_PMDGTI_GreatGlacierCrystalTower",
-                            "Lair3-4-7_FinalFantasy8_DontBeAfraid"
+                            "Lair3-4-7_FinalFantasy8_DontBeAfraid",
+                            "EynRoj_PMDRRT_SkyTower"
                         };
                 } // Tier 8
                 else if (Z.NewTier == 8)
@@ -1630,10 +1640,13 @@ namespace Custom_Soundtrack.ManageTracks
                     Tracks =
                         new string[] {
                             "Underground_Elona_Dungeon15",
+                            "Lair8_Elona_ZeomeTheFalseProphet",
+                            "Lair8_TheLegendOfHeroes_HollowLightOfTheSealedLand",
                             "Underground_FinalFantasy4SNES_LunarSubterrane",
                             "AsphaltMines_PMDBRT_MagmaCavernPitRemix",
                             "EynRoj_PMDSky_TemporalTower",
-                            "Lair3-4-7_FinalFantasy8_DontBeAfraid"
+                            "Lair3-4-7_FinalFantasy8_DontBeAfraid",
+                            "Lair8_TheLegendOfHeroes_HollowLightOfTheSealedLand"
                         };
                 }
             }
