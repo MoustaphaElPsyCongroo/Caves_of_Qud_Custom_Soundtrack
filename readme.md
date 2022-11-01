@@ -1,7 +1,7 @@
 ﻿# Caves of Qud - Custom Soundtrack
 ![Caves of Qud's Custom Soundtrack banner](./banner.png)
 
-Catch your breath while trekking a Desert Canyon, feel your blood boil inside a Lair, get lost into a psychodelic dream between Rainbow Woods…
+Catch your breath while trekking a Desert Canyon, feel your blood boil inside a Lair, get lost into a psychedelic dream between Rainbow Woods…
 
 Ever in games, stayed console open at a location just because the music there moves you? If you never did, I hope to give the same feeling to you with my selection.
 
