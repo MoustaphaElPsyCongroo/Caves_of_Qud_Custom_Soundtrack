@@ -1,4 +1,5 @@
 ﻿# Caves of Qud - Custom Soundtrack
+![Caves of Qud's Custom Soundtrack banner](./banner.png)
 Catch your breath while trekking a Desert Canyon, feel your blood boil inside a Lair, get lost into a psychodelic dream between Rainbow Woods…
 
 Ever in games, stayed console open at a location just because the music there moves you? If you never did, I hope to give the same feeling to you with my selection.
@@ -16,5 +17,8 @@ Custom Soundtrack includes a lot of themes from many roguelikes. The OG, the bes
 
 If you play for quite a time on latest Beta or Stable, you'll eventually crash because the base game doesn't actually support streaming songs. It is entirely fixed in the (huge) upcoming Moon Stair update.
 
-I can't recommand enough you use good EQ and audio settings to be fully immersed in any music. Check mine [here](AddYourOwn.md#optional-using-audio-enhancement-software)
+I can't recommand enough you use good EQ and audio settings to be fully
+immersed in any music. Check mine
+[here](AddYourOwn.md#optional-using-audio-enhancement-software)
+
 Check Credits [here](Credits.md)

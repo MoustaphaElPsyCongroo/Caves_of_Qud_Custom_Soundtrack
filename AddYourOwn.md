@@ -140,10 +140,12 @@ Viper4Windows should now be successfully installed and working. Now you'll use m
 ### Some notes:
 Bass boost is disabled by default, because I prefer to boost it through a
 DAC/amp.
+
 If you listen to music that has a beat, you'll notice that drums have some
 reverb. The effect is incredible for me but you'll see you will hear this
 reverb if you listen to podcasts, films etc. I got used to this effect and like
 the fuller sound, but if it bothers you, just disable Reverberation on the
 right.
+
 Enable it again after though! Just compare with it on and off, listening to any
 music with a beat and you'll see. It's night and day!

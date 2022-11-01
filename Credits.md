@@ -110,8 +110,13 @@
 | YouCanHearTheCryOfThePlanetRemastered | Dominic Ninmark (through Final FanTim) ([channel](https://www.youtube.com/c/DominicNinmark)) |
 
 # Special Thanks
-Thanks to Gnarf for making me understand that modding the soundtrack this way is possible
-Thanks to Helado whose Music Box mod helped me a lot dip my foot into my first mod
+Thanks to Gnarf for making me understand that modding the soundtrack this way
+is possible
+
+Thanks to Helado whose Music Box mod helped me a lot dip my foot into my first
+mod
+
 Huge thanks to AlphaBeard (one of Caves of Qud devs) for super kindly adding
 the possibility for modders to stream songs, along with Ptychomancer for
-creating the roguelike I could only dream about in my childhood.
+creating the roguelike I could only dream of in my childhood.
+
