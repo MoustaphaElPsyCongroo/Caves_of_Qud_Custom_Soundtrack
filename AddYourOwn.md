@@ -100,7 +100,13 @@ That way you'll be unlikely to have the same filenames as me. I prefer not to us
 
 #### No sound
 If the zone you edited becomes silent ingame, it will be because you made a typo in the filename or the file doesn't exist.
-If it's replaced by another, you made a typo copy pasting or forgot to uncomment the else.
+If it's replaced by another, you made a typo copy pasting or forgot to
+uncomment the else.
+
+### No change even after checking for typos
+Some locations, like the Stiltgrounds, only play the default music of their
+region. If the music doesn't change after you added your condition, add toPatch
+= "yes" right after the if braces. It will apply my custom patch for these cases.
 
 #### Vanilla track
 If you want the vanilla track that would play at this location to be part of the mix, just add "default" in the Tracks list.
