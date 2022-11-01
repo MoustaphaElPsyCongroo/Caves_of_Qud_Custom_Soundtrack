@@ -34,6 +34,7 @@ namespace Custom_Soundtrack.ManageTracks
             /*
             --<------------- START EDITING AFTER THIS LINE --------<-----
             */
+            // else
             /*
             *******************************************************
             ******************** NAMED LOCATIONS ******************
@@ -123,7 +124,7 @@ namespace Custom_Soundtrack.ManageTracks
                 {
                     Tracks =
                         new string[] {
-                            "GritGate_PokemonDPPt_ProfRowanLaboratory"
+                            "GritGate_PokemonDPP_ProfRowanLaboratory"
                         };
                 }
             } //---------- //BETHESDA SUSA //-----------
@@ -144,7 +145,10 @@ namespace Custom_Soundtrack.ManageTracks
                 } //Healing Pools 2: Fjorn-Josef, Who Knits The Icy Lattice
                 else if (Z.Z == 13)
                 {
-                    Tracks = new string[] { "BethesdaSusa_Bandit_Tangledeep" };
+                    Tracks =
+                        new string[] {
+                            "BethesdaSusa_Tangledeep_BanditBattle"
+                        };
                 } //Healing Pools 3: Haggabah, Who Plies The Umbral Path
                 else if (Z.Z == 14)
                 {
@@ -885,7 +889,7 @@ namespace Custom_Soundtrack.ManageTracks
                         "GoatfolkHaunts_FinalFantasy4DS_TheDreadfulFight",
                         "GoatfolkHaunts_FinalFantasy4SNES_BossBattle",
                         "GoatfolkHaunts_FinalFantasy5GBA_BattleTheme",
-                        "GoatfolkHaunts_PokémonSM_EliteFourBattle",
+                        "GoatfolkHaunts_PokemonSunMoon_EliteFourBattle",
                         "GoatfolkHaunts_PokemonBW2_GymLeaderBattle"
                     };
             } // RAZED GOATFOLK VILLAGE //
@@ -1227,7 +1231,7 @@ namespace Custom_Soundtrack.ManageTracks
                         Tracks =
                             new string[] {
                                 "DeepJungle_PMDSky_TreeshroudForest",
-                                "DeepJungle_ForebodingForest",
+                                "DeepJungle_PSMD_ForebodingForest",
                                 "DeepJungle_TheLegendOfHeroes_TetracyclicTower",
                                 "DeepJungle_BindingOfIsaacRepented_AqueousSorrow"
                             };
@@ -1615,7 +1619,7 @@ namespace Custom_Soundtrack.ManageTracks
                     Tracks =
                         new string[] {
                             "Underground_FinalFantasy4Advance_Zeromus",
-                            "BethesdaSusa_Bandit_Tangledeep",
+                            "BethesdaSusa_Tangledeep_BanditBattle",
                             "BethesdaSusa_PMDSky_SkyPeakSnowfield",
                             "Underground_PMDSky_SealedRuinPit",
                             "AsphaltMines_PMDBRT_MtBlazeRemix"
