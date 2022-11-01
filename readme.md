@@ -13,7 +13,8 @@ Custom Soundtrack includes a lot of themes from many roguelikes. The OG, the bes
 - And last but not least, includes instructions on how you can add your own themes to create your own Custom Soundtrack! Check them out [here](AddYourOwn.md).
 
 **Note**:
-If you play on quite a time on latest Beta or Stable, you'll eventually crash because the base game doesn't actually support streaming songs. It is entirely fixed in the (huge) upcoming Moon Stair update.
+
+If you play for quite a time on latest Beta or Stable, you'll eventually crash because the base game doesn't actually support streaming songs. It is entirely fixed in the (huge) upcoming Moon Stair update.
 
 I can't recommand enough you use good EQ and audio settings to be fully immersed in any music. Check mine [here](AddYourOwn.md#optional-using-audio-enhancement-software)
 Check Credits [here](Credits.md)

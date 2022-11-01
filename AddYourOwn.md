@@ -31,7 +31,7 @@ If you plan on adding multiple tracks or setting up many or complex conditions f
 ### Creating a condition
 So let me explain how to use the Tracklists.cs file to set up your own tracklist for any zone. If you're already familiar with coding, or don't need to create your own condition and only need to replace some places' music, feel free to jump to the [next section](#editing-zone-tracks).
 
-On line 10, you'll see the start of a class: *public class TrackList*. You don't have to know what a class is, just know that after a zone loaded, it will store a list of tracks defined following some **conditions**. This list is named **Tracks**, and starts empty. 
+On line 10, you'll see the start of a class: *public class TrackList*. You don't have to know what a class is, just know that after a zone loaded, it will store a list of tracks defined following some **conditions**. This list is named **Tracks**, and starts empty.
 
 Scroll down until you see the first comment, "*START EDITING AFTER THIS LINE*". Any single line that starts with double slashes // or multiple lines between /* */ are comments and won't do anything.
 
@@ -39,14 +39,14 @@ What happens after is that whenever a specified condition is met, a list of titl
 
     if (Z.DisplayName.Contains("Joppa"))
     {
-	    Tracks =	    
-			new string[] {	    
-		    "First track filename",	    
-		    "Second track filename",	    
-		    "Last track filename"	    
-	    };	    
+	    Tracks =
+			new string[] {
+		    "First track filename",
+		    "Second track filename",
+		    "Last track filename"
+	    };
     }
-It may look scary but don't worry! Most of what you'll do is copy pasting :) 
+It may look scary but don't worry! Most of what you'll do is copy pasting :)
 Let me explain everything you see here.
 
  - "**if**", you guessed it, allows you to set a **condition**. If whatever is written between parentheses is true, everything between the braces below it will happen.
@@ -59,8 +59,8 @@ After that you're set! What's between braces pretty much never changes: we tell 
 
 After you've done an **if**, you have to follow it by a **else if** so that following conditions doesn't override previous ones. That's why after the "*START EDITING AFTER THIS LINE*", I commented out a single else. Uncomment it and write before it so that your code take precedence over mine. If you use Prettier it will move the else down at the start of my conditions. Whenever you add multiple conditions, follow them by an else if like so:
 
-    if (any condition) 
-    {	 
+    if (any condition)
+    {
 	}
 	else if (other condition)
 	{
@@ -83,7 +83,7 @@ Other attributes are used in the code but have more complex uses and custom meth
 Now that you know how conditions work, you don't have to write them yourself. You can just copy paste my existing condition for the zone you want, move your mp3 files and you're done. So step by step:
 
  - Do **CRTL + f** and search the name of the zone or location type (world map terrain, underground, specific named stratum in a zone) you want. For example Joppa.
- - You'll find a comment with the zone name, like so: 
+ - You'll find a comment with the zone name, like so:
     //---------- //JOPPA  //-----------
  - Select everything after the comment, starting with the **if** until its closing brace. In VsCode you can follow a light gray vertical line to help you see where the brace closes. If it's your first condition, don't copy the else, copy it starting from the second.
  - Scroll back to "*START EDITING AFTER THIS LINE*". Uncomment the // else there (remove the //) and paste what you copied on the line before it. Add your own comment before your if to your liking or use mine.
@@ -99,7 +99,7 @@ I use this same convention for all file names:
 That way you'll be unlikely to have the same filenames as me. I prefer not to use spaces and most special characters in filenames for the sake of compatibility but spaces and most special characters should be supported by Qud just fine.
 
 #### No sound
-If the zone you edited becomes silent ingame, it will be because you made a typo in the filename or the file doesn't exist. 
+If the zone you edited becomes silent ingame, it will be because you made a typo in the filename or the file doesn't exist.
 If it's replaced by another, you made a typo copy pasting or forgot to uncomment the else.
 
 #### Vanilla track
@@ -137,7 +137,13 @@ Viper4Windows should now be successfully installed and working. Now you'll use m
 - **Lower your sound**, then try listening to your favorite music. There is some amount of preamp and gain in my settings, so your current volume will be too loud. Don't worry though, you have no risk of clipping with my settings.
 - Enjoy! :)
 
-### Some notes: 
-Bass boost is disabled by default, because I prefer to boost it through a DAC/amp.
-If you listen to music that has a beat, you'll notice that drums have some reverb. The effect is incredible for me but you'll see you will hear this reverb if you listen to podcasts, films etc. I got used to this effect and like the fuller sound, but if it bothers you, just disable Reverberation on the right. 
-Enable it again after though! Just compare with it on and off, listening to any music with a beat and you'll see. It's night and day!
+### Some notes:
+Bass boost is disabled by default, because I prefer to boost it through a
+DAC/amp.
+If you listen to music that has a beat, you'll notice that drums have some
+reverb. The effect is incredible for me but you'll see you will hear this
+reverb if you listen to podcasts, films etc. I got used to this effect and like
+the fuller sound, but if it bothers you, just disable Reverberation on the
+right.
+Enable it again after though! Just compare with it on and off, listening to any
+music with a beat and you'll see. It's night and day!
