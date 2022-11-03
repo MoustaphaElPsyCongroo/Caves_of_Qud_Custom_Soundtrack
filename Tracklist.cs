@@ -1586,7 +1586,6 @@ namespace Custom_Soundtrack.ManageTracks
                 {
                     Tracks =
                         new string[] {
-                            "Underground_PMDRRT_FrostyGrotto",
                             "Underground_CastlevaniaCurseOfDarkness_AiolonCaveTemple",
                             "HistoricSite2_BindingOfIsaacExcelsior_Ascent",
                             "Ruins_PMDRRT_MtThunderPeak",
