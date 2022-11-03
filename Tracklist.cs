@@ -1576,7 +1576,6 @@ namespace Custom_Soundtrack.ManageTracks
                 {
                     Tracks =
                         new string[] {
-                            "Underground_PMDRRT_SilentChasm",
                             "TombOfTheEaters_CastlevaniaDawnofSorrow_LePinacle",
                             "Underground_BindingOfIsaacWrathOfTheLamb_Sacrificial",
                             "Underground_BindingOfIsaacWrathOfTheLamb_AMournerUntoSheol",
