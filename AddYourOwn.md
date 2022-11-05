@@ -155,3 +155,10 @@ right.
 
 Enable it again after though! Just compare with it on and off, listening to any
 music with a beat and you'll see. It's night and day!
+
+### About EQ
+EqualizerAPO you just downloaded is the best EQ for Windows. I recommend you use it alongside my Viper to very more precisely and strongly control any frequency. To do it:
+- Open Viper's Settings and check "Enable APO coexists"
+- Restart your PC.
+- Download [Peace](https://sourceforge.net/projects/peace-equalizer-apo-extension/), a GUI for EqualizerAPO.
+- Using Peace, apply [Oratory1990](https://www.google.com/url?sa=t&source=web&rct=j&url=https://www.reddit.com/r/oratory1990/wiki/index/&ved=2ahUKEwiz_-yn9Zf7AhWrz4UKHbMmD3IQjjh6BAgcEAE&usg=AOvVaw30U6o4wV90HVrnxj1qAIEN)'s settings to your specific model of headphones (the link contains instructions and FAQ on how to do it). From this base you can further tweak them to your liking. Keep in mind that if you're already near maxing out your volume, you would most likely need an amp for those because he applies negative preamp to prevent songs from clipping at high volumes.
