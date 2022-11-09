@@ -1,5 +1,7 @@
 using System;
+using System.Collections.Generic;
 using System.Linq;
+using Custom_Soundtrack.PsychicBiomeSupport;
 using Custom_Soundtrack.Utilities;
 using HistoryKit;
 using XRL;
@@ -1711,18 +1713,42 @@ namespace Custom_Soundtrack.ManageTracks
                 compare of ReferenceDisplayName */
                 string[] zoneModifiers =
                 {
-                    "slimy ",
-                    "slime-drenched ",
-                    "tarry ",
-                    "rusty ",
-                    "rust-shrouded ",
-                    "subterranean ",
-                    "outskirts "
+                    "slimy",
+                    "slime-drenched",
+                    "tarry",
+                    "rusty",
+                    "rust-shrouded",
+                    "subterranean",
+                    "outskirts"
                 };
                 foreach (string modifier in zoneModifiers)
                 {
                     currentZone = currentZone.Replace(modifier, String.Empty);
                 }
+
+                /* Support for Psychic Biomes, that add modifiers tied
+                to mental mutations (check XRL.World.Biomes.PsychicBiome) */
+                if (
+                    Z.GetRegion() == "MoonStair" ||
+                    Z.DisplayName.Contains("Stair") ||
+                    Z.DisplayName == "Eyn Roj" ||
+                    Z.DisplayName.Contains("crystalline roots")
+                )
+                {
+                    PsychicBiomeMods PsychicBiomeSupport =
+                        new PsychicBiomeMods();
+
+                    List<string> psychicBiomeModifiers =
+                        PsychicBiomeMods.psychicBiomeModifiers;
+
+                    foreach (string modifier in psychicBiomeModifiers)
+                    {
+                        currentZone =
+                            currentZone.Replace(modifier, String.Empty);
+                    }
+                }
+
+                currentZone = currentZone.Trim(' ');
 
                 /*
                 If a track have been playing for less than tracksMinSeconds
