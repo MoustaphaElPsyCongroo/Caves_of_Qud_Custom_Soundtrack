@@ -1157,7 +1157,9 @@ namespace Custom_Soundtrack.ManageTracks
                             "HistoricSite1_NieRAutomata_TheWeightOfTheWorldJapanese",
                             "HistoricSite1_NieRAutomata_TheWeightOfTheWorldJapanese",
                             "HistoricSite1_NieRAutomata_TheWeightOfTheWorldEnglish",
-                            "HistoricSite1_FinalFantasy10_SutekiDaNe"
+                            "HistoricSite1_FinalFantasy10_SutekiDaNe",
+                            "HistoricSite1_NieRAutomata_TheWeightOfTheWorldJapanese",
+                            "HistoricSite1_TheLegendOfHeroes_TheWhereaboutsOfLight"
                         };
                 }
             } /*
