@@ -1023,12 +1023,32 @@ namespace Custom_Soundtrack.ManageTracks
                 // TIER (0-)1: SALT MARSHES, DESERT CANYONS //
                 if (Z.NewTier <= 1)
                 {
-                    Tracks =
-                        new string[] {
-                            "Ruins_WildARMs_AfterTheChaosAndDestruction",
-                            "Ruins_WildARMsAF_AfterTheChaosAndDestruction",
-                            "Ruins_PMDRRT_MtThunderPeak"
-                        };
+                    if (Z.GetRegion() == "Saltmarsh")
+                    {
+                        Tracks =
+                            new string[] {
+                                "Ruins_WildARMs_AfterTheChaosAndDestruction",
+                                "Ruins_PMDRRT_MtThunderPeak"
+                            };
+                    }
+                    else if (Z.GetRegion() == "DesertCanyon")
+                    {
+                        Tracks =
+                            new string[] {
+                                "Ruins_WildARMsAF_AfterTheChaosAndDestruction",
+                                "Ruins_PMDBRT_MtThunderPeak"
+                            };
+                    }
+                    else
+                    {
+                        Tracks =
+                            new string[] {
+                                "Ruins_WildARMs_AfterTheChaosAndDestruction",
+                                "Ruins_WildARMsAF_AfterTheChaosAndDestruction",
+                                "Ruins_PMDRRT_MtThunderPeak",
+                                "Ruins_PMDBRT_MtThunderPeak"
+                            };
+                    }
                 } // TIER 2: SALT DESERTS, HILLS, FLOWER FIELDS //
                 else if (Z.NewTier == 2)
                 {
@@ -1583,7 +1603,8 @@ namespace Custom_Soundtrack.ManageTracks
                             "TombOfTheEaters_CastlevaniaDawnofSorrow_LePinacle",
                             "Underground_BindingOfIsaacWrathOfTheLamb_Sacrificial",
                             "Underground_BindingOfIsaacWrathOfTheLamb_AMournerUntoSheol",
-                            "RuinsRegion_TalesOfMajEyal_Mystery"
+                            "RuinsRegion_TalesOfMajEyal_Mystery",
+                            "SaltMarsh_BindingOfIsaacRepented_LostInGuilt"
                         };
                 } // Tier 3
                 else if (Z.NewTier == 3)
@@ -1592,8 +1613,9 @@ namespace Custom_Soundtrack.ManageTracks
                         new string[] {
                             "Underground_CastlevaniaCurseOfDarkness_AiolonCaveTemple",
                             "HistoricSite2_BindingOfIsaacExcelsior_Ascent",
-                            "Ruins_PMDRRT_MtThunderPeak",
-                            "Underground_BindingOfIsaacRepented_DesolateAbyss"
+                            "Ruins_PMDBRT_MtThunderPeak",
+                            "Underground_BindingOfIsaacRepented_DesolateAbyss",
+                            "RuinsRegion_TalesOfMajEyal_Mystery"
                         };
                 } // Tier 4
                 else if (Z.NewTier == 4)
@@ -1603,17 +1625,19 @@ namespace Custom_Soundtrack.ManageTracks
                             "TombOfTheEaters_CastlevaniaDawnOfSorrow_CondemnedTower",
                             "RainbowWood_Tangledeep_MysteriesOfTime",
                             "Underground_BindingOfIsaacAntibirth_Morphine",
-                            "TombOfTheEaters_PMDSky_SealedRuin"
+                            "TombOfTheEaters_PMDSky_SealedRuin",
+                            "BaroqueRuins_TouhouGW_MysticDream~SnowOrCherryPetal"
                         };
                 } // Tier 5
                 else if (Z.NewTier == 5)
                 {
                     Tracks =
                         new string[] {
-                            "Lair7_PMDSky_FortuneRavine",
-                            "BethesdaSusa_PMDSky_VastIceMountainPeak",
+                            "Underground_PMDSky_VastIceMountain",
                             "Lair5-6_PMDSky_IcicleForest",
-                            "AsphaltMines_PMDSky_SpringCaveDepths"
+                            "AsphaltMines_PMDSky_SpringCaveDepths",
+                            "BaroqueRuins_PSMD_PrehistoricRuins",
+                            "Hills_TheLegendOfHeroes_SecretGreenPassage"
                         };
                 } // Tier 6
                 else if (Z.NewTier == 6)
@@ -1647,6 +1671,7 @@ namespace Custom_Soundtrack.ManageTracks
                             "Lair8_Elona_ZeomeTheFalseProphet",
                             "Lair8_TheLegendOfHeroes_HollowLightOfTheSealedLand",
                             "Underground_FinalFantasy4SNES_LunarSubterrane",
+                            "Underground_Elona_Dungeon15",
                             "AsphaltMines_PMDBRT_MagmaCavernPitRemix",
                             "EynRoj_PMDSky_TemporalTower",
                             "Lair3-4-7_FinalFantasy8_DontBeAfraid",
