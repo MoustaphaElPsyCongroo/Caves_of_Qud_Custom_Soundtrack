@@ -722,7 +722,6 @@ namespace Custom_Soundtrack.ManageTracks
                             "VillageStarting_WildARMs_IntoTheWilderness",
                             "VillageStarting_TouhouGW_TheBulletReporter",
                             "VillageStarting_WildARMs_IntoTheWilderness",
-                            "VillageStarting_PMDGTI_Opening",
                             "VillageStarting_TheLegendsOfHeroes_OpeningSize",
                             "VillageStarting_WildARMs_IntoTheWilderness",
                             "VillageStarting_BindingOfIsaacWrathOfTheLamb_Opening",
@@ -1035,7 +1034,7 @@ namespace Custom_Soundtrack.ManageTracks
                         Tracks =
                             new string[] {
                                 "Ruins_WildARMsAF_AfterTheChaosAndDestruction",
-                                "Ruins_PMDBRT_MtThunderPeak"
+                                "Ruins_PMDRRT_MtThunderPeak"
                             };
                     }
                     else
@@ -1044,8 +1043,7 @@ namespace Custom_Soundtrack.ManageTracks
                             new string[] {
                                 "Ruins_WildARMs_AfterTheChaosAndDestruction",
                                 "Ruins_WildARMsAF_AfterTheChaosAndDestruction",
-                                "Ruins_PMDRRT_MtThunderPeak",
-                                "Ruins_PMDBRT_MtThunderPeak"
+                                "Ruins_PMDRRT_MtThunderPeak"
                             };
                     }
                 } // TIER 2: SALT DESERTS, HILLS, FLOWER FIELDS //
@@ -1119,7 +1117,8 @@ namespace Custom_Soundtrack.ManageTracks
                             "HistoricSite5-2_ShirenMD3_CentipedesDen",
                             "HistoricSite5-2_ShirenMD3_InnerKarakuriMansion",
                             "HistoricSite5-2_ShirenMD3_InnerKarakuriMansion",
-                            "HistoricSite5-2_PMDRRT_GreatCanyon"
+                            "HistoricSite5-2_PMDRRT_GreatCanyon",
+                            "default"
                         };
                 } // FOURTH PERIOD, TIERS 3-4 //
                 else if (Z.NewTier <= 4)
@@ -1612,7 +1611,7 @@ namespace Custom_Soundtrack.ManageTracks
                         new string[] {
                             "Underground_CastlevaniaCurseOfDarkness_AiolonCaveTemple",
                             "HistoricSite2_BindingOfIsaacExcelsior_Ascent",
-                            "Ruins_PMDBRT_MtThunderPeak",
+                            "MoonStair_PMDBRT_MtThunderPeakRemastered",
                             "Underground_BindingOfIsaacRepented_DesolateAbyss",
                             "RuinsRegion_TalesOfMajEyal_Mystery"
                         };
@@ -1636,7 +1635,8 @@ namespace Custom_Soundtrack.ManageTracks
                             "Lair5-6_PMDSky_IcicleForest",
                             "AsphaltMines_PMDSky_SpringCaveDepths",
                             "BaroqueRuins_PSMD_PrehistoricRuins",
-                            "Hills_TheLegendOfHeroes_SecretGreenPassage"
+                            "Hills_TheLegendOfHeroes_SecretGreenPassage",
+                            "SaltDesert_PMDGTI_ScorchingDesert"
                         };
                 } // Tier 6
                 else if (Z.NewTier == 6)
