@@ -1,6 +1,8 @@
 ﻿# Caves of Qud - Custom Soundtrack
 ![Caves of Qud's Custom Soundtrack banner](./banner.png)
 
+[*You can also get it on the Steam Workshop*](https://steamcommunity.com/sharedfiles/filedetails/?id=2882820353)
+
 Catch your breath while trekking a Desert Canyon, feel your blood boil inside a Lair, get lost into a psychedelic dream between Rainbow Woods…
 
 Ever in games, stayed console open at a location just because the music there moves you? If you never did, I hope to give the same feeling to you with my selection.
