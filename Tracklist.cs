@@ -168,7 +168,8 @@ namespace Custom_Soundtrack.ManageTracks
                         new string[] {
                             "BethesdaSusa_PMDSky_BlizzardIsland",
                             "BethesdaSusa_PMDSky_VastIceMountainPeak",
-                            "BethesdaSusa_PMDGTI_GreatGlacierCrystalTower"
+                            "BethesdaSusa_PMDGTI_GreatGlacierCrystalTower",
+                            "default"
                         };
                 } //Abandoned Ward 2
                 else if (Z.Z <= 22)
