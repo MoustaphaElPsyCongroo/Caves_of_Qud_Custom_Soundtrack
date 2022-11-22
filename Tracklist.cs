@@ -26,7 +26,7 @@ namespace Custom_Soundtrack.ManageTracks
 
         private static DateTime maxTime;
 
-        public double tracksMinSeconds = 90;
+        public double tracksMinSeconds = 150;
 
         private string isSameTrack = null;
 
