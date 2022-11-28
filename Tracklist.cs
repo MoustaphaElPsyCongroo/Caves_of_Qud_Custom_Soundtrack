@@ -571,6 +571,7 @@ namespace Custom_Soundtrack.ManageTracks
                         Tracks =
                             new string[] {
                                 "TombOfTheEaters_PMDSky_SteamCave",
+                                "TombOfTheEaters_PSMD_AncientBarrow",
                                 "default"
                             };
                     }
