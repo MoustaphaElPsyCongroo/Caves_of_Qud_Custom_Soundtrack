@@ -209,7 +209,7 @@ namespace Custom_Soundtrack.ManageTracks
             } //---------- //CHARRED TREE //-----------
             else if (
                 Z.DisplayName.Contains("charred tree") ||
-                Z.HasBuilder("ClearAll")
+                Z.HasBuilder("ClearAll") && (Z.NewTier <= 4)
             )
             {
                 Tracks =
@@ -511,7 +511,8 @@ namespace Custom_Soundtrack.ManageTracks
                         "SixDayStilt_Elona_ShrineOfGuardian"
                     };
             } //---------- //THE HYDROPON //-----------
-            else if (Z.DisplayName.Contains("The Hydropon"))
+            else if (Z.DisplayName.Contains("The Hydropon")) ||
+                Z.HasBuilder("ClearAll") && (Z.NewTier >= 6)
             {
                 Tracks =
                     new string[] {
