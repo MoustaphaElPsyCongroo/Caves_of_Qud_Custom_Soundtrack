@@ -511,9 +511,18 @@ namespace Custom_Soundtrack.ManageTracks
                         "SixDayStilt_Elona_ShrineOfGuardian"
                     };
             } //---------- //THE HYDROPON //-----------
+<<<<<<< HEAD
             else if (Z.DisplayName.Contains("The Hydropon")) ||
                 Z.HasBuilder("ClearAll") && (Z.NewTier >= 6)
+=======
+            else if (
+                Z.DisplayName.Contains("Hydropon") ||
+                Z.HasBuilder("ClearAll") && (Z.NewTier >= 6)
+            )
+>>>>>>> master
             {
+                toPatch = "yes";
+
                 Tracks =
                     new string[] {
                         "TheHydropon_DivinityOS2_FinalDepartureEnding"
@@ -969,14 +978,15 @@ namespace Custom_Soundtrack.ManageTracks
                             "Lair5-6_PSMD_EchoesOfTheMysticalForest",
                             "Lair5-6_Elona_OverworldField1Remastered"
                         };
-                } // TIER 7: PALLADIUM REEF, BAROQUE RUINS // Just a fallback, no Lair there pretty much
+                } // TIER 7: PALLADIUM REEF, BAROQUE RUINS
                 else if (Z.NewTier == 7)
                 {
                     Tracks =
                         new string[] {
                             "Lair7_PMDSky_FortuneRavine",
                             "Lair3-4-7_FinalFantasy8_DontBeAfraid",
-                            "Lair7_PSMD_MysteryJungle"
+                            "Lair7_PSMD_MysteryJungle",
+                            "Lair7_ChocoboEB_GuardianFlame"
                         };
                 } // TIER 8: MOON STAIR
                 else if (Z.NewTier == 8)
@@ -1076,7 +1086,7 @@ namespace Custom_Soundtrack.ManageTracks
                             "Ruins_PMDSky_HiddenHighlandRemastered",
                             "Ruins_Bleach_NothingCanBeExplained"
                         };
-                } // TIER 7: PALLADIUM REEF, BAROQUE RUINS // Same as Lairs, no Ruins pretty much
+                } // TIER 7: PALLADIUM REEF, BAROQUE RUINS
                 else if (Z.NewTier == 7)
                 {
                     Tracks =
@@ -1168,7 +1178,7 @@ namespace Custom_Soundtrack.ManageTracks
                             "HistoricSite2_NieRAutomata_War&WarVocals",
                             "HistoricSite2_SteinsGate_Ending1",
                             "HistoricSite2_BindingOfIsaacExcelsior_Ascent",
-                            "default"
+                            "HistoricSite2_NieRAutomata_ThisCannotContinue"
                         };
                 } // FIRST PERIOD, TIER 8 //
                 else if (Z.NewTier == 8)
@@ -1556,7 +1566,6 @@ namespace Custom_Soundtrack.ManageTracks
                     {
                         Tracks =
                             new string[] {
-                                "TremblingDunes_PMDSky_UpperSteamCave",
                                 "SaltDesert_Persona5_WhenMotherWasThere",
                                 "SaltDesert_PMDGTI_ScorchingDesert"
                             };
