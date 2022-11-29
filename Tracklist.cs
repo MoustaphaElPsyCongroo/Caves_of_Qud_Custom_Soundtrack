@@ -27,7 +27,7 @@ namespace Custom_Soundtrack.ManageTracks
 
         private static DateTime maxTime;
 
-        public double tracksMinSeconds = 90;
+        public double tracksMinSeconds = 150;
 
         private string isSameTrack = null;
 
@@ -169,7 +169,8 @@ namespace Custom_Soundtrack.ManageTracks
                         new string[] {
                             "BethesdaSusa_PMDSky_BlizzardIsland",
                             "BethesdaSusa_PMDSky_VastIceMountainPeak",
-                            "BethesdaSusa_PMDGTI_GreatGlacierCrystalTower"
+                            "BethesdaSusa_PMDGTI_GreatGlacierCrystalTower",
+                            "default"
                         };
                 } //Abandoned Ward 2
                 else if (Z.Z <= 22)
@@ -209,7 +210,7 @@ namespace Custom_Soundtrack.ManageTracks
             } //---------- //CHARRED TREE //-----------
             else if (
                 Z.DisplayName.Contains("charred tree") ||
-                Z.HasBuilder("ClearAll")
+                Z.HasBuilder("ClearAll") && (Z.NewTier <= 4)
             )
             {
                 Tracks =
@@ -511,8 +512,13 @@ namespace Custom_Soundtrack.ManageTracks
                         "SixDayStilt_Elona_ShrineOfGuardian"
                     };
             } //---------- //THE HYDROPON //-----------
-            else if (Z.DisplayName.Contains("The Hydropon"))
+            else if (
+                Z.DisplayName.Contains("Hydropon") ||
+                Z.HasBuilder("ClearAll") && (Z.NewTier >= 6)
+            )
             {
+                toPatch = "yes";
+
                 Tracks =
                     new string[] {
                         "TheHydropon_DivinityOS2_FinalDepartureEnding"
@@ -570,6 +576,7 @@ namespace Custom_Soundtrack.ManageTracks
                         Tracks =
                             new string[] {
                                 "TombOfTheEaters_PMDSky_SteamCave",
+                                "TombOfTheEaters_PSMD_AncientBarrow",
                                 "default"
                             };
                     }
@@ -967,14 +974,15 @@ namespace Custom_Soundtrack.ManageTracks
                             "Lair5-6_PSMD_EchoesOfTheMysticalForest",
                             "Lair5-6_Elona_OverworldField1Remastered"
                         };
-                } // TIER 7: PALLADIUM REEF, BAROQUE RUINS // Just a fallback, no Lair there pretty much
+                } // TIER 7: PALLADIUM REEF, BAROQUE RUINS
                 else if (Z.NewTier == 7)
                 {
                     Tracks =
                         new string[] {
                             "Lair7_PMDSky_FortuneRavine",
                             "Lair3-4-7_FinalFantasy8_DontBeAfraid",
-                            "Lair7_PSMD_MysteryJungle"
+                            "Lair7_PSMD_MysteryJungle",
+                            "Lair7_ChocoboEB_GuardianFlame"
                         };
                 } // TIER 8: MOON STAIR
                 else if (Z.NewTier == 8)
@@ -1074,7 +1082,7 @@ namespace Custom_Soundtrack.ManageTracks
                             "Ruins_PMDSky_HiddenHighlandRemastered",
                             "Ruins_Bleach_NothingCanBeExplained"
                         };
-                } // TIER 7: PALLADIUM REEF, BAROQUE RUINS // Same as Lairs, no Ruins pretty much
+                } // TIER 7: PALLADIUM REEF, BAROQUE RUINS
                 else if (Z.NewTier == 7)
                 {
                     Tracks =
@@ -1166,7 +1174,7 @@ namespace Custom_Soundtrack.ManageTracks
                             "HistoricSite2_NieRAutomata_War&WarVocals",
                             "HistoricSite2_SteinsGate_Ending1",
                             "HistoricSite2_BindingOfIsaacExcelsior_Ascent",
-                            "default"
+                            "HistoricSite2_NieRAutomata_ThisCannotContinue"
                         };
                 } // FIRST PERIOD, TIER 8 //
                 else if (Z.NewTier == 8)
@@ -1554,7 +1562,6 @@ namespace Custom_Soundtrack.ManageTracks
                     {
                         Tracks =
                             new string[] {
-                                "TremblingDunes_PMDSky_UpperSteamCave",
                                 "SaltDesert_Persona5_WhenMotherWasThere",
                                 "SaltDesert_PMDGTI_ScorchingDesert"
                             };
