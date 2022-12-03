@@ -1185,12 +1185,12 @@ namespace Custom_Soundtrack.ManageTracks
                 {
                     Tracks =
                         new string[] {
+                            "HistoricSite1_NieRAutomata_Simone",
                             "HistoricSite1_NieRAutomata_TheWeightOfTheWorldJapanese",
-                            "HistoricSite1_NieRAutomata_TheWeightOfTheWorldJapanese",
-                            "HistoricSite1_NieRAutomata_TheWeightOfTheWorldEnglish",
+                            "HistoricSite1_NieRAutomata_Simone",
                             "HistoricSite1_FinalFantasy10_SutekiDaNe",
-                            "HistoricSite1_NieRAutomata_TheWeightOfTheWorldJapanese",
-                            "HistoricSite1_TheLegendOfHeroes_TheWhereaboutsOfLight"
+                            "HistoricSite1_TheLegendOfHeroes_TheWhereaboutsOfLight",
+                            "HistoricSite1_NieRAutomata_Simone"
                         };
                 }
             } /*
@@ -1405,8 +1405,17 @@ namespace Custom_Soundtrack.ManageTracks
                     region == "MoonStair" || Z.DisplayName.Contains("Stair")
                 )
                 {
-                    // Surface
-                    if (Z.Z == 10)
+                    // Roaming Keter of Chavah, the Tree of Life
+                    if (Z.Z < 10)
+                    {
+                        toPatch = "yes";
+
+                        Tracks =
+                            new string[] {
+                                "EynRojRoamingKeter_PSMD_TreeOfLifeTrunksRemix"
+                            };
+                    } // Surface
+                    else if (Z.Z == 10)
                     {
                         Tracks =
                             new string[] {
