@@ -165,13 +165,25 @@ namespace Custom_Soundtrack.ManageTracks
                 } //Ruined Ward
                 else if (Z.Z <= 20)
                 {
-                    Tracks =
-                        new string[] {
-                            "BethesdaSusa_PMDSky_BlizzardIsland",
-                            "BethesdaSusa_PMDSky_VastIceMountainPeak",
-                            "BethesdaSusa_PMDGTI_GreatGlacierCrystalTower",
-                            "default"
-                        };
+                    if (Z.Z == 16)
+                    {
+                        Tracks =
+                            new string[] {
+                                "BethesdaSusa_PMDSky_BlizzardIsland",
+                                "BethesdaSusa_PMDSky_VastIceMountainPeak",
+                                "BethesdaSusa_PMDGTI_GreatGlacierCrystalTower"
+                            };
+                    }
+                    else
+                    {
+                        Tracks =
+                            new string[] {
+                                "BethesdaSusa_PMDSky_BlizzardIsland",
+                                "BethesdaSusa_PMDSky_VastIceMountainPeak",
+                                "BethesdaSusa_PMDGTI_GreatGlacierCrystalTower",
+                                "default"
+                            };
+                    }
                 } //Abandoned Ward 2
                 else if (Z.Z <= 22)
                 {
@@ -1035,7 +1047,7 @@ namespace Custom_Soundtrack.ManageTracks
                         Tracks =
                             new string[] {
                                 "Ruins_WildARMs_AfterTheChaosAndDestruction",
-                                "Ruins_PMDRRT_MtThunderPeak"
+                                "Ruins_PMDBRT_MtThunderPeak"
                             };
                     }
                     else if (Z.GetRegion() == "DesertCanyon")
@@ -1069,7 +1081,6 @@ namespace Custom_Soundtrack.ManageTracks
                     Tracks =
                         new string[] {
                             "Ruins_WildARMsAF_AfterTheChaosAndDestruction",
-                            "Ruins_PMDSky_HiddenHighland",
                             "Ruins_PMDSky_HiddenHighland"
                         };
                 } // TIERS 5-6: RAINBOW WOODS, LAKE HINNOM, DEEP JUNGLE, BANANA GROVE //
@@ -1079,7 +1090,6 @@ namespace Custom_Soundtrack.ManageTracks
                         new string[] {
                             "Ruins_WildARMsAF_AfterTheChaosAndDestruction",
                             "Ruins_PMDSky_HiddenHighlandRemastered",
-                            "Ruins_PMDSky_HiddenHighlandRemastered",
                             "Ruins_Bleach_NothingCanBeExplained"
                         };
                 } // TIER 7: PALLADIUM REEF, BAROQUE RUINS
@@ -1088,8 +1098,7 @@ namespace Custom_Soundtrack.ManageTracks
                     Tracks =
                         new string[] {
                             "Ruins_PSMD_Voidlands",
-                            "Ruins_PMDSky_DeepDarkCraterRemastered",
-                            "Ruins_PSMD_Voidlands"
+                            "Ruins_PMDSky_DeepDarkCraterRemastered"
                         };
                 } // TIER 8: MOON STAIR
                 else if (Z.NewTier == 8)
@@ -1181,12 +1190,12 @@ namespace Custom_Soundtrack.ManageTracks
                 {
                     Tracks =
                         new string[] {
+                            "HistoricSite1_NieRAutomata_Simone",
                             "HistoricSite1_NieRAutomata_TheWeightOfTheWorldJapanese",
-                            "HistoricSite1_NieRAutomata_TheWeightOfTheWorldJapanese",
-                            "HistoricSite1_NieRAutomata_TheWeightOfTheWorldEnglish",
+                            "HistoricSite1_NieRAutomata_Simone",
                             "HistoricSite1_FinalFantasy10_SutekiDaNe",
-                            "HistoricSite1_NieRAutomata_TheWeightOfTheWorldJapanese",
-                            "HistoricSite1_TheLegendOfHeroes_TheWhereaboutsOfLight"
+                            "HistoricSite1_TheLegendOfHeroes_TheWhereaboutsOfLight",
+                            "HistoricSite1_NieRAutomata_Simone"
                         };
                 }
             } /*
@@ -1401,8 +1410,17 @@ namespace Custom_Soundtrack.ManageTracks
                     region == "MoonStair" || Z.DisplayName.Contains("Stair")
                 )
                 {
-                    // Surface
-                    if (Z.Z == 10)
+                    // Roaming Keter of Chavah, the Tree of Life
+                    if (Z.Z < 10)
+                    {
+                        toPatch = "yes";
+
+                        Tracks =
+                            new string[] {
+                                "EynRojRoamingKeter_PSMD_TreeOfLifeTrunksRemix"
+                            };
+                    } // Surface
+                    else if (Z.Z == 10)
                     {
                         Tracks =
                             new string[] {
