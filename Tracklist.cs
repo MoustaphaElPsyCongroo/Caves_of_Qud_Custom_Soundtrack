@@ -993,8 +993,9 @@ namespace Custom_Soundtrack.ManageTracks
                         new string[] {
                             "Lair7_PMDSky_FortuneRavine",
                             "Lair3-4-7_FinalFantasy8_DontBeAfraid",
-                            "Lair7_PSMD_MysteryJungle",
-                            "Lair7_ChocoboEB_GuardianFlame"
+                            "Lair7_ChocoboEB_GuardianFlame",
+                            "Lair7_BindingOfIsaacRepentance_Absentia",
+                            "Lair7_PSMD_MysteryJungle"
                         };
                 } // TIER 8: MOON STAIR
                 else if (Z.NewTier == 8)
@@ -1039,10 +1040,12 @@ namespace Custom_Soundtrack.ManageTracks
             */
             else if (Z.HasBuilder("OverlandRuins"))
             {
+                string region = Z.GetRegion();
+
                 // TIER (0-)1: SALT MARSHES, DESERT CANYONS //
                 if (Z.NewTier <= 1)
                 {
-                    if (Z.GetRegion() == "Saltmarsh")
+                    if (region == "Saltmarsh")
                     {
                         Tracks =
                             new string[] {
@@ -1050,11 +1053,12 @@ namespace Custom_Soundtrack.ManageTracks
                                 "Ruins_PMDBRT_MtThunderPeak"
                             };
                     }
-                    else if (Z.GetRegion() == "DesertCanyon")
+                    else if (region == "DesertCanyon")
                     {
                         Tracks =
                             new string[] {
-                                "Ruins_WildARMsAF_AfterTheChaosAndDestruction",
+                                "Ruins_WildARMs_AfterTheChaosAndDestruction",
+                                "Ruins_PMDRRT_MtThunderPeak",
                                 "Ruins_PMDRRT_MtThunderPeak"
                             };
                     }
@@ -1063,48 +1067,106 @@ namespace Custom_Soundtrack.ManageTracks
                         Tracks =
                             new string[] {
                                 "Ruins_WildARMs_AfterTheChaosAndDestruction",
-                                "Ruins_WildARMsAF_AfterTheChaosAndDestruction",
                                 "Ruins_PMDRRT_MtThunderPeak"
                             };
                     }
                 } // TIER 2: SALT DESERTS, HILLS, FLOWER FIELDS //
                 else if (Z.NewTier == 2)
                 {
-                    Tracks =
-                        new string[] {
-                            "Ruins_WildARMs_AfterTheChaosAndDestruction",
-                            "Ruins_FinalFantasy7_AnxiousHeart"
-                        };
+                    if (region == "Flowerfields")
+                    {
+                        Tracks =
+                            new string[] {
+                                "Ruins_Bleach_HereToStay",
+                                "Ruins_Bleach_HereToStay",
+                                "Ruins_BleachNeverMeantToBelong2ndMovement"
+                            };
+                    }
+                    else
+                    {
+                        Tracks =
+                            new string[] {
+                                "Ruins_WildARMs_AfterTheChaosAndDestruction",
+                                "Ruins_FinalFantasy7_AnxiousHeart"
+                            };
+                    }
                 } // TIERS 3-4: JUNGLES, RUINS, RIVERS, MOUNTAINS //
                 else if (Z.NewTier <= 4)
                 {
-                    Tracks =
-                        new string[] {
-                            "Ruins_WildARMsAF_AfterTheChaosAndDestruction",
-                            "Ruins_PMDSky_HiddenHighland"
-                        };
+                    if (region == "Jungle" || region == "Ruins")
+                    {
+                        Tracks =
+                            new string[] {
+                                "Ruins_PMDSky_HiddenHighland",
+                                "Ruins_PMDSky_TreeshroudForest",
+                                "Ruins_WildARMsAF_AfterTheChaosAndDestruction"
+                            };
+                    } // Rivers
+                    else if (region == "Water")
+                    {
+                        Tracks =
+                            new string[] {
+                                "Ruins_ChocoboEB_GuardianWater1",
+                                "Ruins_BindingOfIsaacRepentance_RiverOfDespair",
+                                "Ruins_WildARMs_AfterTheChaosAndDestruction"
+                            };
+                    }
+                    else
+                    {
+                        Tracks =
+                            new string[] {
+                                "Ruins_WildARMsAF_AfterTheChaosAndDestruction",
+                                "Ruins_PMDSky_HiddenHighland",
+                                "Ruins_Bleach_NothingCanBeExplained"
+                            };
+                    }
                 } // TIERS 5-6: RAINBOW WOODS, LAKE HINNOM, DEEP JUNGLE, BANANA GROVE //
                 else if (Z.NewTier <= 6)
                 {
-                    Tracks =
-                        new string[] {
-                            "Ruins_WildARMsAF_AfterTheChaosAndDestruction",
-                            "Ruins_PMDSky_HiddenHighlandRemastered",
-                            "Ruins_Bleach_NothingCanBeExplained"
-                        };
+                    if (region == "LakeHinnom" || region == "Fungal")
+                    {
+                        Tracks =
+                            new string[] {
+                                "Ruins_ChocoboEB_GuardianWater1",
+                                "Ruins_TalesOfMajEyal_WorldOfIce"
+                            };
+                    }
+                    else
+                    {
+                        Tracks =
+                            new string[] {
+                                "Ruins_WildARMsAF_AfterTheChaosAndDestruction",
+                                "Ruins_PMDSky_HiddenHighlandRemastered",
+                                "Ruins_Bleach_NothingCanBeExplained"
+                            };
+                    }
                 } // TIER 7: PALLADIUM REEF, BAROQUE RUINS
                 else if (Z.NewTier == 7)
                 {
-                    Tracks =
-                        new string[] {
-                            "Ruins_PSMD_Voidlands",
-                            "Ruins_PMDSky_DeepDarkCraterRemastered"
-                        };
+                    if (region == "PalladiumReef")
+                    {
+                        Tracks =
+                            new string[] {
+                                "Ruins_PMDSky_UpperSteamCave",
+                                "Ruins_PMDSky_UpperSteamCave",
+                                "Ruins_PSMD_Voidlands"
+                            };
+                    }
+                    else
+                    {
+                        Tracks =
+                            new string[] {
+                                "Ruins_PSMD_Voidlands",
+                                "Ruins_PMDSky_DeepDarkCraterRemastered",
+                                "Ruins_PMDSky_DeepDarkCraterRemastered"
+                            };
+                    }
                 } // TIER 8: MOON STAIR
                 else if (Z.NewTier == 8)
                 {
                     Tracks =
                         new string[] {
+                            "Ruins_FinalFantasy4_TheLunariansRemastered",
                             "Ruins_FinalFantasy4_TheLunariansRemastered",
                             "Ruins_PSMD_Voidlands"
                         };
@@ -1116,7 +1178,7 @@ namespace Custom_Soundtrack.ManageTracks
             */
             else if (Z.HasBuilder("SultanDungeon"))
             {
-                // FIFTH PERIOD, TIERS 0-1 //
+                // FIFTH PERIOD, TIERS 0-1: SALT MARSHES, DESERT CANYONS //
                 if (Z.NewTier <= 1)
                 {
                     Tracks =
@@ -1124,10 +1186,11 @@ namespace Custom_Soundtrack.ManageTracks
                             "default",
                             "HistoricSite5-1_Mozart_Lacrimosa",
                             "HistoricSite5-1_BrahmsSymphony3Op90_PocoAllegretto",
+                            "default",
                             "HistoricSite5-1_MozartPianoConcerto23Adagio",
                             "HistoricSite5-1_PMDRTDX_MtThunderPeak"
                         };
-                } // FIFTH PERIOD, TIER 2 //
+                } // FIFTH PERIOD, TIER 2: SALT DESERTS, HILLS, FLOWER FIELDS //
                 else if (Z.NewTier == 2)
                 {
                     Tracks =
@@ -1138,7 +1201,7 @@ namespace Custom_Soundtrack.ManageTracks
                             "HistoricSite5-2_PMDRRT_GreatCanyon",
                             "default"
                         };
-                } // FOURTH PERIOD, TIERS 3-4 //
+                } // FOURTH PERIOD, TIERS 3-4: JUNGLES, RUINS, RIVERS, MOUNTAINS //
                 else if (Z.NewTier <= 4)
                 {
                     Tracks =
@@ -1146,8 +1209,7 @@ namespace Custom_Soundtrack.ManageTracks
                             "HistoricSite4_FinalFantasy6_Terra",
                             "HistoricSite4_ChronoCross_Shore",
                             "HistoricSite4_ShirenMD3_Hourai",
-                            "HistoricSite4_FinalFantasy7_MainTheme",
-                            "default"
+                            "HistoricSite4_FinalFantasy7_MainTheme"
                         };
                 } // THIRD PERIOD, TIERS 5-6: RAINBOW WOOD, LAKE HINNOM
                 else if (
@@ -1175,8 +1237,8 @@ namespace Custom_Soundtrack.ManageTracks
                             "TombOfTheEaters_ThePanpipers_LonelyShepherd",
                             "HistoricSite3_PokemonSunMoon_Ending"
                         };
-                } // SECOND PERIOD, TIER 7 //
-                else if (Z.NewTier == 7)
+                } // SECOND PERIOD, TIER 7: BAROQUE RUINS
+                else if (Z.NewTier == 7 && Z.GetRegion() == "BaroqueRuins")
                 {
                     Tracks =
                         new string[] {
@@ -1185,7 +1247,19 @@ namespace Custom_Soundtrack.ManageTracks
                             "HistoricSite2_BindingOfIsaacExcelsior_Ascent",
                             "HistoricSite2_NieRAutomata_ThisCannotContinue"
                         };
-                } // FIRST PERIOD, TIER 8 //
+                } // SECOND PERIOD, TIER 7: PALLADIUM REEF
+                else if (Z.NewTier == 7)
+                {
+                    Tracks =
+                        new string[] {
+                            "HistoricSite2_ChocoboEB_GuardianWater2",
+                            "HistoricSite2_PMDSky_VastIceMountain",
+                            "HistoricSite2_TalesOfMajEyal_TakingFlight",
+                            "HistoricSite2_EtrianMD_WaterfallWoodlands",
+                            "HistoricSite2_PMDSky_VastIceMountain",
+                            "HistoricSite2_ChocoboEB_GuardianWater2"
+                        };
+                } // FIRST PERIOD, TIER 8: MOON STAIR
                 else if (Z.NewTier == 8)
                 {
                     Tracks =
@@ -1270,7 +1344,6 @@ namespace Custom_Soundtrack.ManageTracks
                     {
                         Tracks =
                             new string[] {
-                                "DeepJungle_PMDSky_TreeshroudForest",
                                 "DeepJungle_PSMD_ForebodingForest",
                                 "DeepJungle_TheLegendOfHeroes_TetracyclicTower",
                                 "DeepJungle_BindingOfIsaacRepented_AqueousSorrow"
@@ -1280,7 +1353,6 @@ namespace Custom_Soundtrack.ManageTracks
                     {
                         Tracks =
                             new string[] {
-                                "DeepJungle_PMDSky_TreeshroudForest",
                                 "BethesdaSusa_PMDSky_SkyPeakSnowfield",
                                 "DeepJungle_PSMD_ForebodingForestRemix"
                             };
@@ -1331,7 +1403,7 @@ namespace Custom_Soundtrack.ManageTracks
                     {
                         Tracks =
                             new string[] {
-                                "Jungle_TalesOfMajEyal_WorldOfIce",
+                                "Ruins_TalesOfMajEyal_WorldOfIce",
                                 "LakeHinnom_TalesOfMajEyal_RainyDay"
                             };
                     }
@@ -1401,7 +1473,7 @@ namespace Custom_Soundtrack.ManageTracks
                     {
                         Tracks =
                             new string[] {
-                                "LakeHinnom_EtrianMD_WaterfallWoodlands",
+                                "HistoricSite2_EtrianMD_WaterfallWoodlands",
                                 "LakeHinnom_TalesOfMajEyal_RainyDay"
                             };
                     }
@@ -1533,8 +1605,7 @@ namespace Custom_Soundtrack.ManageTracks
                         Tracks =
                             new string[] {
                                 "Rivers_CastlevaniaCurseOfDarkness_GaribaldiCourtyard",
-                                "Rivers_NieRAutomata_CityRuinsRaysOfLight",
-                                "Rivers_TalesOfMajEyal_TakingFlight"
+                                "Rivers_NieRAutomata_CityRuinsRaysOfLight"
                             };
                     }
                 } // RUINS
@@ -1607,7 +1678,6 @@ namespace Custom_Soundtrack.ManageTracks
                         Tracks =
                             new string[] {
                                 "SaltMarsh_PSMD_NoeTown",
-                                "LakeHinnom_EtrianMD_WaterfallWoodlands",
                                 "SaltMarsh_BindingOfIsaacRepented_LostInGuilt"
                             };
                     }
@@ -1657,7 +1727,7 @@ namespace Custom_Soundtrack.ManageTracks
                 {
                     Tracks =
                         new string[] {
-                            "Underground_PMDSky_VastIceMountain",
+                            "HistoricSite2_PMDSky_VastIceMountain",
                             "Lair5-6_PMDSky_IcicleForest",
                             "AsphaltMines_PMDSky_SpringCaveDepths",
                             "BaroqueRuins_PSMD_PrehistoricRuins",
