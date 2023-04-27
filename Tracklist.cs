@@ -948,6 +948,8 @@ namespace Custom_Soundtrack.ManageTracks
                         new string[] {
                             "Lair0-1_ChocoboMD-EB_FestivalOfTheHunt",
                             "Lair0-1_FinalFantasy7_J-E-N-O-V-A",
+                            "Lair0-1_TouhouGW_KobitoOfTheShiningNeedle",
+                            "Lair0-1_TouhouGW_KobitoOfTheShiningNeedle",
                             "Lair0-1_PokemonSunMoon_VictoryRoad",
                             "Lair0-1_ChocoboMD-EB_FestivalOfTheHunt"
                         };
@@ -957,10 +959,11 @@ namespace Custom_Soundtrack.ManageTracks
                     Tracks =
                         new string[] {
                             "Lair2_CastlevaniaDawnOfSorrow_ClocherMaudit",
-                            "Lair2_TouhouGW_BloomNobly~BorderOfLife",
                             "Lair2_DivinityOS2_TavernFight",
+                            "Lair2_TouhouGW_BloomNobly~BorderOfLife",
                             "Lair2_DivinityOS2_TheShadowPrince",
-                            "Lair2_CastlevaniaDawnOfSorrow_ClocherMaudit"
+                            "Lair2_CastlevaniaDawnOfSorrow_ClocherMaudit",
+                            "Lair2_TouhouGW_BloomNobly~BorderOfLife"
                         };
                 } // TIERS 3-4: JUNGLES, RUINS, RIVERS, MOUNTAINS //
                 else if (Z.NewTier <= 4)
