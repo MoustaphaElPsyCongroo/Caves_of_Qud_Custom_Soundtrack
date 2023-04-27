@@ -26,7 +26,7 @@ namespace Custom_Soundtrack.ManageTracks
 
         private static DateTime maxTime;
 
-        public double tracksMinSeconds = 100;
+        public double tracksMinSeconds = 165;
 
         private string isSameTrack = null;
 
@@ -1302,14 +1302,28 @@ namespace Custom_Soundtrack.ManageTracks
                 } // THIRD PERIOD, TIERS 5-6: BANANA GROVE, DEEP JUNGLE
                 else if (Z.NewTier <= 6)
                 {
-                    Tracks =
-                        new string[] {
-                            "HistoricSite3_HansZimmer_Time",
-                            "AsphaltMines_PMDBRT_MtBlazeRemix",
-                            "HistoricSite3_LordOfTheRings_BreakingOfTheFellowship",
-                            "TombOfTheEaters_ThePanpipers_LonelyShepherd",
-                            "HistoricSite3_HansZimmer_Time"
-                        };
+                    // BANANA GROVE
+                    if (Z.GetRegion() == "BananaGrove")
+                    {
+                        Tracks =
+                            new string[] {
+                                "HistoricSite3_Tangledeep_TheGreatSandVilla",
+                                "HistoricSite3_DivinityOriginalSin2_FortJoyBattleOud",
+                                "TombOfTheEaters_ThePanpipers_LonelyShepherd",
+                                "HistoricSite3_HansZimmer_Time",
+                                "HistoricSite3_Tangledeep_TheGreatSandVilla"
+                            };
+                    } // DEEP JUNGLE
+                    else if (Z.GetRegion() == "DeepJungle")
+                    {
+                        Tracks =
+                            new string[] {
+                                "HistoricSite3_HansZimmer_Time",
+                                "HistoricSite3_Tangledeep_EternalVerdantWaltz",
+                                "HistoricSite3_LordOfTheRings_BreakingOfTheFellowship",
+                                "HistoricSite3_HansZimmer_Time"
+                            };
+                    }
                 } // SECOND PERIOD, TIER 7: BAROQUE RUINS
                 else if (Z.NewTier == 7 && Z.GetRegion() == "BaroqueRuins")
                 {
