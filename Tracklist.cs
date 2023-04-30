@@ -26,7 +26,7 @@ namespace Custom_Soundtrack.ManageTracks
 
         private static DateTime maxTime;
 
-        public double tracksMinSeconds = 165;
+        public double tracksMinSeconds = 120;
 
         private string isSameTrack = null;
 
@@ -142,7 +142,9 @@ namespace Custom_Soundtrack.ManageTracks
                 else if (Z.Z == 12)
                 {
                     Tracks =
-                        new string[] { "BethesdaSusa_PokemonRSE_EliteFour" };
+                        new string[] {
+                            "BethesdaSusa_PokemonRSE_EliteFourBattle"
+                        };
                 } //Healing Pools 2: Fjorn-Josef, Who Knits The Icy Lattice
                 else if (Z.Z == 13)
                 {
@@ -468,7 +470,6 @@ namespace Custom_Soundtrack.ManageTracks
                     Tracks =
                         new string[] {
                             "RustWells_ShirenMD1DS_TaintedPath",
-                            "RustWells_PMDGTI_IllusoryHazyPass",
                             "RustWells_PMDGTI_WithinTheCragsOfLament"
                         };
                 }
@@ -893,12 +894,16 @@ namespace Custom_Soundtrack.ManageTracks
                 Tracks =
                     new string[] {
                         "GoatfolkVillage_DivinityOS2_FortJoyBattleBansuri",
-                        "GoatfolkVillage_FinalFantasy4_Boss",
+                        "GoatfolkVillage_FinalFantasy4_BossBattle",
                         "GoatfolkVillage_PokemonOrigins_WildBattle",
-                        "GoatfolkVillage_DivinityOS2_FortJoyBattleBansuri",
                         "GoatfolkVillage_PokemonBW_GymLeaderBattle",
                         "GoatfolkVillage_PokemonDPP_TeamGalaxyAdminBattle",
-                        "GoatfolkVillage_DivinityOS2_FortJoyBattleBansuri"
+                        "GoatfolkVillage_PokemonDPP_GymLeaderBattle",
+                        "GoatfolkVillage_PokemonRSE_GymLeaderBattle",
+                        "GoatfolkVillage_PokemonBW_EliteFourBattle",
+                        "GoatfolkVillage_FinalFantasy10_BattleTheme",
+                        "GoatfolkVillage_PokemonSunMoon_LegendsRedBlueBattle",
+                        "GoatfolkVillage_FinalFantasy6_TheDecisiveBattle"
                     };
             } // GOATFOLK HAUNTS //
             else if (Z.HasBuilder("GoatfolkQlippothYurts"))
@@ -909,7 +914,10 @@ namespace Custom_Soundtrack.ManageTracks
                         "GoatfolkHaunts_FinalFantasy4SNES_BossBattle",
                         "GoatfolkHaunts_FinalFantasy5GBA_BattleTheme",
                         "GoatfolkHaunts_PokemonSunMoon_EliteFourBattle",
-                        "GoatfolkHaunts_PokemonBW2_GymLeaderBattle"
+                        "GoatfolkHaunts_PokemonBW2_GymLeaderBattle",
+                        "GoatfolkHaunts_PokemonRSE_KyogreGroudonRayquaza",
+                        "GoatfolkHaunts_PokemonDPP_ChampionCynthia",
+                        "GoatfolkHaunts_PokemonOrigins_ChampionBlue"
                     };
             } // RAZED GOATFOLK VILLAGE //
             else if (
@@ -947,10 +955,9 @@ namespace Custom_Soundtrack.ManageTracks
                         new string[] {
                             "Lair0-1_ChocoboMD-EB_FestivalOfTheHunt",
                             "Lair0-1_FinalFantasy7_J-E-N-O-V-A",
+                            "Lair0-1_CastlevaniaCurseOfDarkness_AbandonedCastle",
                             "Lair0-1_TouhouGW_KobitoOfTheShiningNeedle",
-                            "Lair0-1_TouhouGW_KobitoOfTheShiningNeedle",
-                            "Lair0-1_PokemonSunMoon_VictoryRoad",
-                            "Lair0-1_ChocoboMD-EB_FestivalOfTheHunt"
+                            "Lair0-1_PokemonSunMoon_VictoryRoad"
                         };
                 } // TIER 2: SALT DESERTS, HILLS, FLOWER FIELDS //
                 else if (Z.NewTier == 2)
@@ -960,9 +967,7 @@ namespace Custom_Soundtrack.ManageTracks
                             "Lair2_CastlevaniaDawnOfSorrow_ClocherMaudit",
                             "Lair2_DivinityOS2_TavernFight",
                             "Lair2_TouhouGW_BloomNobly~BorderOfLife",
-                            "Lair2_DivinityOS2_TheShadowPrince",
-                            "Lair2_CastlevaniaDawnOfSorrow_ClocherMaudit",
-                            "Lair2_TouhouGW_BloomNobly~BorderOfLife"
+                            "Lair2_DivinityOS2_TheShadowPrince"
                         };
                 } // TIERS 3-4: JUNGLES, RUINS, RIVERS, MOUNTAINS //
                 else if (Z.NewTier <= 4)
@@ -1060,7 +1065,7 @@ namespace Custom_Soundtrack.ManageTracks
                             new string[] {
                                 "Lair7_ChocoboEB_GuardianFlame1",
                                 "Lair7_BindingOfIsaacRepentance_Absentia",
-                                "Lair7_FinalFantasy7Remake_ThoseWhoFightFurther"
+                                "Lair7_CastlevaniaDawnOfSorrow_MinesAbandonnées"
                             };
                     }
                 } // TIER 8: MOON STAIR
@@ -1253,7 +1258,9 @@ namespace Custom_Soundtrack.ManageTracks
                             "HistoricSite5-1_Mozart_Lacrimosa",
                             "HistoricSite5-1_BrahmsSymphony3Op90_PocoAllegretto",
                             "default",
+                            "default",
                             "HistoricSite5-1_MozartPianoConcerto23Adagio",
+                            "HistoricSite5-1_PMDRTDX_MtThunderPeak",
                             "HistoricSite5-1_PMDRTDX_MtThunderPeak"
                         };
                 } // FIFTH PERIOD, TIER 2: SALT DESERTS, HILLS, FLOWER FIELDS //
@@ -1263,8 +1270,7 @@ namespace Custom_Soundtrack.ManageTracks
                         new string[] {
                             "HistoricSite5-2_ShirenMD3_CentipedesDen",
                             "HistoricSite5-2_ShirenMD3_InnerKarakuriMansion",
-                            "HistoricSite5-2_PMDRRT_GreatCanyonRemastered2",
-                            "default"
+                            "HistoricSite5-2_PMDRRT_GreatCanyonRemastered2"
                         };
                 } // FOURTH PERIOD, TIERS 3-4: JUNGLES, RUINS, RIVERS, MOUNTAINS //
                 else if (Z.NewTier <= 4)
@@ -1275,7 +1281,9 @@ namespace Custom_Soundtrack.ManageTracks
                             "HistoricSite4_ChronoCross_Shore",
                             "HistoricSite4_FinalFantasy7_MainTheme",
                             "HistoricSite4_ShirenMD3_Hourai",
-                            "HistoricSite4_Beethoven_Concerto5Emperor2ndMovement"
+                            "HistoricSite4_Martika_ToySoldiers",
+                            "HistoricSite4_Beethoven_Concerto5Emperor2ndMovement",
+                            "HistoricSite4_Eminem_LikeToySoldiersInstrumental"
                         };
                 } // THIRD PERIOD, TIERS 5-6: RAINBOW WOOD
                 else if (Z.NewTier <= 6 && (Z.GetRegion() == "Fungal"))
@@ -1286,7 +1294,8 @@ namespace Custom_Soundtrack.ManageTracks
                             "HistoricSite3_TheLegendOfHeroes_TheWhereaboutsOfTheStars",
                             "RuinsRegion_TalesOfMajEyal_Mystery",
                             "HistoricSite3_PMDSky_ForANewLife",
-                            "HistoricSite3_Bleach_ARequiem"
+                            "HistoricSite3_Bleach_ARequiem",
+                            "HistoricSite3_NieRAutomata_VagueHope"
                         };
                 } // THIRD PERIOD, TIERS 5-6: LAKE HINNOM
                 else if (Z.NewTier <= 6 && (Z.GetRegion() == "LakeHinnom"))
@@ -1320,7 +1329,7 @@ namespace Custom_Soundtrack.ManageTracks
                             new string[] {
                                 "HistoricSite3_HansZimmer_Time",
                                 "HistoricSite3_Tangledeep_EternalVerdantWaltz",
-                                "HistoricSite3_LordOfTheRings_BreakingOfTheFellowship",
+                                "HistoricSite3_Bleach_SoundscapeToArdor",
                                 "HistoricSite3_HansZimmer_Time"
                             };
                     }
@@ -1705,6 +1714,7 @@ namespace Custom_Soundtrack.ManageTracks
                             new string[] {
                                 "RuinsRegion_PMDGTI_TyrianMazeInnerChamber",
                                 "RuinsRegion_PMDRRT_BuriedRelic",
+                                "RuinsRegion_TheBindingOfIsaacAntibirth_FaultLines",
                                 "RuinsRegion_CastlevaniaDawnOfSorrow_MinesAbandonnées",
                                 "RuinsRegion_BindingOfIsaacRepented_Sepulchre"
                             };
