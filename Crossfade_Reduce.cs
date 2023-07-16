@@ -8,6 +8,7 @@ namespace Custom_Soundtrack.HarmonyPatches
         [HarmonyPatch(typeof (SoundManager), nameof(SoundManager.PlayMusic))]
         static void Prefix(
             string Track,
+            string Channel,
             bool Crossfade,
             ref float CrossfadeDuration
         )

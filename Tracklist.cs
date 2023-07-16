@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using Custom_Soundtrack.PsychicBiomeSupport;
 using Custom_Soundtrack.Utilities;
 using HistoryKit;
 using XRL;
@@ -470,7 +471,8 @@ namespace Custom_Soundtrack.ManageTracks
                     Tracks =
                         new string[] {
                             "RustWells_ShirenMD1DS_TaintedPath",
-                            "RustWells_PMDGTI_WithinTheCragsOfLament"
+                            "RustWells_PMDGTI_WithinTheCragsOfLament",
+                            "RustWells_CavernsOfXaskazien2_m05"
                         };
                 }
             } //---------- //RUSTED ARCHWAY //-----------
@@ -589,7 +591,8 @@ namespace Custom_Soundtrack.ManageTracks
                             new string[] {
                                 "TombOfTheEaters_PMDSky_SteamCave",
                                 "TombOfTheEaters_PSMD_AncientBarrow",
-                                "default"
+                                "default",
+                                "TombOfTheEaters_TalesOfMajEyal_TheAncients"
                             };
                     }
                 } //Above level 1 - Crematory and Columbarium
@@ -629,7 +632,8 @@ namespace Custom_Soundtrack.ManageTracks
                             new string[] {
                                 "TombOfTheEaters_Albinioni_AdagioInGMinor",
                                 "TombOfTheEaters_Albinioni_AdagioInGMinor",
-                                "TombOfTheEaters_TouhouGW_WindGodGirl"
+                                "TombOfTheEaters_TouhouGW_WindGodGirl",
+                                "TombOfTheEaters_CavernsOfXaskazien2_m08"
                             };
                     }
                 } //Sultan Tombs: Above levels 4-9
@@ -979,7 +983,8 @@ namespace Custom_Soundtrack.ManageTracks
                             new string[] {
                                 "Lair4_ChocoboEB_GuardianFlame2",
                                 "Lair4_PMDRRT_MagmaCavernPit",
-                                "Lair4_FinalFantasy7_ThoseWhoFightFurther"
+                                "Lair4_FinalFantasy7_ThoseWhoFightFurther",
+                                "Lair7_TalesOfMajEyal_Far away"
                             };
                     } // JUNGLE
                     else if (Z.GetRegion() == "Jungle")
@@ -988,7 +993,8 @@ namespace Custom_Soundtrack.ManageTracks
                             new string[] {
                                 "Lair3-4-7_FinalFantasy8_DontBeAfraid",
                                 "Lair3-4_BindingOfIsaacAntibirth_Allnoise",
-                                "Lair3_PSMD_MysteryJungle"
+                                "Lair3_PSMD_MysteryJungle",
+                                "Lair3_CavernsOfXaskazien2_m07"
                             };
                     } // RIVERS
                     else if (Z.GetRegion() == "Water")
@@ -1043,7 +1049,7 @@ namespace Custom_Soundtrack.ManageTracks
                             new string[] {
                                 "SaltDesert_PMDGTI_ScorchingDesert",
                                 "AsphaltMines_PMDSky_SpringCaveDepths",
-                                "Lair5-6_PMDSky_DarkWasteland"
+                                "Lair5-6_CavernsOfXaskazien2_m09"
                             };
                     }
                 } // TIER 7: PALLADIUM REEF, BAROQUE RUINS (BOTH ARE RARE)
@@ -1065,7 +1071,8 @@ namespace Custom_Soundtrack.ManageTracks
                             new string[] {
                                 "Lair7_ChocoboEB_GuardianFlame1",
                                 "Lair7_BindingOfIsaacRepentance_Absentia",
-                                "Lair7_CastlevaniaDawnOfSorrow_MinesAbandonnées"
+                                "Lair7_CastlevaniaDawnOfSorrow_MinesAbandonnées",
+                                "Lair7_TalesOfMajEyal_Far away"
                             };
                     }
                 } // TIER 8: MOON STAIR
@@ -1268,8 +1275,9 @@ namespace Custom_Soundtrack.ManageTracks
                 {
                     Tracks =
                         new string[] {
-                            "HistoricSite5-2_ShirenMD3_CentipedesDen",
+                            "HistoricSite5-2_NieRAutomata_MemoriesOfDust",
                             "HistoricSite5-2_ShirenMD3_InnerKarakuriMansion",
+                            "HistoricSite5-2_TheBindingOfIsaacWrathOfTheLamb_Repentant",
                             "HistoricSite5-2_PMDRRT_GreatCanyonRemastered2"
                         };
                 } // FOURTH PERIOD, TIERS 3-4: JUNGLES, RUINS, RIVERS, MOUNTAINS //
@@ -1282,8 +1290,7 @@ namespace Custom_Soundtrack.ManageTracks
                             "HistoricSite4_FinalFantasy7_MainTheme",
                             "HistoricSite4_ShirenMD3_Hourai",
                             "HistoricSite4_Martika_ToySoldiers",
-                            "HistoricSite4_Beethoven_Concerto5Emperor2ndMovement",
-                            "HistoricSite4_Eminem_LikeToySoldiersInstrumental"
+                            "HistoricSite4_Beethoven_Concerto5Emperor2ndMovement"
                         };
                 } // THIRD PERIOD, TIERS 5-6: RAINBOW WOOD
                 else if (Z.NewTier <= 6 && (Z.GetRegion() == "Fungal"))
@@ -1317,8 +1324,9 @@ namespace Custom_Soundtrack.ManageTracks
                         Tracks =
                             new string[] {
                                 "HistoricSite3_Tangledeep_TheGreatSandVilla",
-                                "HistoricSite3_DivinityOriginalSin2_FortJoyBattleOud",
+                                "HistoricSite3_DivinityOS2_FortJoyBattleOud",
                                 "TombOfTheEaters_ThePanpipers_LonelyShepherd",
+                                "HistoricSite3_DivinityOS2_DancingWithTheSourceOud",
                                 "HistoricSite3_HansZimmer_Time",
                                 "HistoricSite3_Tangledeep_TheGreatSandVilla"
                             };
@@ -1715,7 +1723,6 @@ namespace Custom_Soundtrack.ManageTracks
                                 "RuinsRegion_PMDGTI_TyrianMazeInnerChamber",
                                 "RuinsRegion_PMDRRT_BuriedRelic",
                                 "RuinsRegion_TheBindingOfIsaacAntibirth_FaultLines",
-                                "RuinsRegion_CastlevaniaDawnOfSorrow_MinesAbandonnées",
                                 "RuinsRegion_BindingOfIsaacRepented_Sepulchre"
                             };
                     } // Subterranean Ruins
@@ -1723,8 +1730,9 @@ namespace Custom_Soundtrack.ManageTracks
                     {
                         Tracks =
                             new string[] {
-                                "RuinsRegion_TalesOfMajEyal_Mystery",
-                                "RuinsRegion_PMDGTI_TyrianMazeInnerChamber"
+                                "RuinsRegion_PMDGTI_KilioneaRoad",
+                                "RuinsRegion_PMDGTI_TyrianMazeInnerChamber",
+                                "RuinsRegion_TalesOfMajEyal_Mystery"
                             };
                     }
                 } // SALT DUNES
@@ -1842,7 +1850,9 @@ namespace Custom_Soundtrack.ManageTracks
                             "BethesdaSusa_Tangledeep_BanditBattle",
                             "BethesdaSusa_PMDSky_SkyPeakSnowfield",
                             "Underground_PMDSky_SealedRuinPit",
-                            "AsphaltMines_PMDBRT_MtBlazeRemix"
+                            "Lair3_CavernsOfXaskazien2_m07",
+                            "AsphaltMines_PMDBRT_MtBlazeRemix",
+                            "TombOfTheEaters_TalesOfMajEyal_TheAncients"
                         };
                 } // Tier 7
                 else if (Z.NewTier == 7)
@@ -1856,6 +1866,7 @@ namespace Custom_Soundtrack.ManageTracks
                             "Lair3-4-7_FinalFantasy8_DontBeAfraid",
                             "EynRoj_PMDRRT_SkyTower",
                             "Lair7_BindingOfIsaacRepentance_Absentia",
+                            "TombOfTheEaters_CavernsOfXaskazien2_m08",
                             "Lair8_TheLegendOfHeroes_HollowLightOfTheSealedLand"
                         };
                 } // Tier 8
@@ -1868,8 +1879,10 @@ namespace Custom_Soundtrack.ManageTracks
                             "AsphaltMines_PMDSky_SpringCaveDepths",
                             "Underground_FinalFantasy4SNES_LunarSubterrane",
                             "AsphaltMines_PMDBRT_MagmaCavernPitRemix",
+                            "Underground_TalesOfMajEyal_Sinestra",
                             "EynRoj_PMDSky_TemporalTower",
-                            "Underground_Elona_Dungeon15"
+                            "Underground_Elona_Dungeon15",
+                            "Lair7_TalesOfMajEyal_Far away"
                         };
                 }
             }
@@ -1885,6 +1898,11 @@ namespace Custom_Soundtrack.ManageTracks
             villageSnapshot =
                 Qud.API.HistoryAPI.GetVillageSnapshot(villageFaction);
 
+            if (villageSnapshot == null)
+            {
+                return false;
+            }
+
             IsStartingVillage =
                 villageSnapshot
                     .GetProperty("isVillageZero", "false")
@@ -1899,6 +1917,11 @@ namespace Custom_Soundtrack.ManageTracks
 
             villageSnapshot =
                 Qud.API.HistoryAPI.GetVillageSnapshot(villageFaction);
+
+            if (villageSnapshot == null)
+            {
+                return false;
+            }
 
             if (villageSnapshot.GetProperty("abandoned") == "true")
             {
@@ -1945,6 +1968,28 @@ namespace Custom_Soundtrack.ManageTracks
                 foreach (string modifier in zoneModifiers)
                 {
                     currentZone = currentZone.Replace(modifier, String.Empty);
+                }
+
+                /* Support for Psychic Biomes, that add modifiers tied
+                to mental mutations (check XRL.World.Biomes.PsychicBiome) */
+                if (
+                    Z.GetRegion() == "MoonStair" ||
+                    Z.DisplayName.Contains("Stair") ||
+                    Z.DisplayName == "Eyn Roj" ||
+                    Z.DisplayName.Contains("crystalline roots")
+                )
+                {
+                    PsychicBiomeMods PsychicBiomeSupport =
+                        new PsychicBiomeMods();
+
+                    List<string> psychicBiomeModifiers =
+                        PsychicBiomeMods.psychicBiomeModifiers;
+
+                    foreach (string modifier in psychicBiomeModifiers)
+                    {
+                        currentZone =
+                            currentZone.Replace(modifier, String.Empty);
+                    }
                 }
 
                 currentZone = currentZone.Trim(' ');

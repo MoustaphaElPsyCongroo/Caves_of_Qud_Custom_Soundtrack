@@ -27,6 +27,7 @@ namespace Custom_Soundtrack.HarmonyPatches
                     {
                         SoundManager
                             .PlayMusic(trackData[0],
+                            "music",
                             !ParentObject.HasTag("NoCrossfade"));
                     }
 
