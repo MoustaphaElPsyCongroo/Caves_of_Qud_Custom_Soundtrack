@@ -9,17 +9,17 @@ namespace Custom_Soundtrack.PatchNoMusicLoad
     [HarmonyPatch]
     class PatchNoMusicLoad
     {
-        [HarmonyPatch(typeof (Zone), nameof(Zone.Activated))]
+        [HarmonyPatch(typeof(Zone), nameof(Zone.Activated))]
         static void Postfix(Zone __instance)
         {
+            TrackManager TrackManager = new TrackManager();
             Zone Z = __instance;
-            TrackList Tracks = new TrackList();
             string[] trackData; // In the form [ trackname, isSameTrack=null ]
-            bool shouldPatchTrack = Tracks.ShouldPatchTrackIn(Z);
+            bool shouldPatchTrack = TrackManager.ShouldPatchTrackIn(Z);
 
             if (shouldPatchTrack == true)
             {
-                trackData = Tracks.GetTrackIn(Z);
+                trackData = TrackManager.GetTrackIn(Z);
 
                 if (trackData != null)
                 {
@@ -27,7 +27,7 @@ namespace Custom_Soundtrack.PatchNoMusicLoad
 
                     if (trackToPlay != "default" && trackData[1] == null)
                     {
-                        SoundManager.PlayMusic (trackToPlay);
+                        SoundManager.PlayMusic(trackToPlay);
                     }
                 }
             }

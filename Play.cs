@@ -8,27 +8,28 @@ namespace Custom_Soundtrack.HarmonyPatches
     [HarmonyPatch]
     class Play
     {
-        [HarmonyPatch(typeof (Music), nameof(Music.TryMusic))]
+        [HarmonyPatch(typeof(Music), nameof(Music.TryMusic))]
         static bool Prefix(Music __instance)
         {
-            TrackList Tracks = new TrackList();
+            TrackManager TrackManager = new TrackManager();
             GameObject ParentObject = __instance.ParentObject;
             Zone Z = ParentObject.CurrentZone;
             string[] trackData; // In the form [ trackname, isSameTrack=null ]
-            bool shouldPatchTrack = Tracks.ShouldPatchTrackIn(Z);
+            bool shouldPatchTrack = TrackManager.ShouldPatchTrackIn(Z);
 
             if (shouldPatchTrack == false)
             {
-                trackData = Tracks.GetTrackIn(Z);
+                trackData = TrackManager.GetTrackIn(Z);
 
                 if (trackData != null && trackData[0] != "default")
                 {
                     if (trackData[1] == null)
                     {
-                        SoundManager
-                            .PlayMusic(trackData[0],
+                        SoundManager.PlayMusic(
+                            trackData[0],
                             "music",
-                            !ParentObject.HasTag("NoCrossfade"));
+                            !ParentObject.HasTag("NoCrossfade")
+                        );
                     }
 
                     /* When custom music should be played, don't continue the
