@@ -199,11 +199,11 @@ namespace Custom_Soundtrack.ManageTracks
             },
             {
                 "Eyn Roj and Crystalline Roots_36-39",
-                new List<string> { "EynRoj_NieRAutomata_TheWeightOfTheWorld_End" }
+                new List<string> { "EynRoj_PSMD_TreeOfLifeTrunkRemastered" }
             },
             {
                 "Eyn Roj and Crystalline Roots_40_Last Floor",
-                new List<string> { "EynRoj_PMDSky_DialgasFightToTheFinish" }
+                new List<string> { "EynRoj_PSMD_TreeOfLifeTrunkRemastered" }
             },
             {
                 "Ezra",
@@ -760,8 +760,8 @@ namespace Custom_Soundtrack.ManageTracks
                 {
                     "Lair7_ChocoboEB_GuardianFlame1",
                     "Lair7_BindingOfIsaacRepentance_Absentia",
-                    "Lair7_CastlevaniaDawnOfSorrow_MinesAbandonnées",
-                    "Lair7_TalesOfMajEyal_Far away"
+                    "Lair7_TalesOfMajEyal_Far away",
+                    "Underground_TalesOfMajEyal_Sinestra"
                 }
             },
             {
@@ -774,12 +774,8 @@ namespace Custom_Soundtrack.ManageTracks
                 }
             },
             {
-                "Lairs_The Lair of Oboroqoru, Legendary Ape God_0-5",
-                new List<string>
-                {
-                    "LairOboroqoru_PMDSky_FortuneRavine",
-                    "LairOboroqoru_PMDSky_ThroughTheSeaOfTime"
-                }
+                "Lairs_The Lair of Oboroqoru, Legendary Ape God_1-5",
+                new List<string> { "LairOboroqoru_PMDSky_FortuneRavine" }
             },
             {
                 "Lairs_The Lair of Oboroqoru, Legendary Ape God_6-8",
@@ -966,9 +962,9 @@ namespace Custom_Soundtrack.ManageTracks
                 "Historic Sites_4th Period, Tiers 3-4_Rivers historic sites",
                 new List<string>
                 {
-                    "HistoricSite4_Martika_ToySoldiers",
-                    "HistoricSite4_BindingOfIsaacAntibirth_ForeignerInZeal",
-                    "HistoricSite4_BindingOfIsaacAntibirth_Lethe",
+                    "Rivers_NieRAutomata_CityRuinsRaysOfLightVocal",
+                    "HistoricSite4_Parano_MrLEV12Part1",
+                    "Underground_BindingOfIsaacAntibirth_Morphine",
                     "HistoricSite4_Beethoven_Concerto5Emperor2ndMovement"
                 }
             },
@@ -1206,7 +1202,7 @@ namespace Custom_Soundtrack.ManageTracks
             },
             {
                 "World Map terrain_Moon Stair terrain_Roaming Keter of Chavah, the Tree of Life",
-                new List<string> { "EynRojRoamingKeter_PSMD_TreeOfLifeTrunksRemix" }
+                new List<string> { "EynRojRoamingKeter_PSMD_TreeOfLifeTrunkRemix" }
             },
             {
                 "World Map terrain_Moon Stair terrain_Subterranean",
@@ -1400,6 +1396,7 @@ namespace Custom_Soundtrack.ManageTracks
                     "BethesdaSusa_PMDSky_SkyPeakSnowfield",
                     "Underground_PMDSky_SealedRuinPit",
                     "Lair3_CavernsOfXaskazien2_m07",
+                    "BethesdaSusa_PMDGTI_GreatGlacierCrystalTower",
                     "AsphaltMines_PMDBRT_MtBlazeRemix",
                     "TombOfTheEaters_TalesOfMajEyal_TheAncients"
                 }
@@ -1411,9 +1408,7 @@ namespace Custom_Soundtrack.ManageTracks
                     "Lair8_Elona_ZeomeTheFalseProphet",
                     "Underground_FinalFantasy4SNES_LunarSubterrane",
                     "AsphaltMines_ChocoboEB_GuardianDarkness",
-                    "BethesdaSusa_PMDGTI_GreatGlacierCrystalTower",
                     "Lair3-4-7_FinalFantasy8_DontBeAfraid",
-                    "EynRoj_PMDRRT_SkyTower",
                     "Lair7_BindingOfIsaacRepentance_Absentia",
                     "TombOfTheEaters_CavernsOfXaskazien2_m08",
                     "Lair8_TheLegendOfHeroes_HollowLightOfTheSealedLand"

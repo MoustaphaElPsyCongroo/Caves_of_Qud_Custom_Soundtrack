@@ -2,6 +2,7 @@ using System;
 using Custom_Soundtrack.ManageTracks;
 using Custom_Soundtrack.Utilities;
 using HarmonyLib;
+using XRL.Core;
 using XRL.World;
 
 namespace Custom_Soundtrack.PatchNoMusicLoad

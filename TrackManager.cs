@@ -1,15 +1,15 @@
 using System;
 using System.Collections.Generic;
-using System.Linq;
 using Custom_Soundtrack.PsychicBiomeSupport;
 using Custom_Soundtrack.Utilities;
 using HistoryKit;
 using XRL;
 using XRL.World;
+using HarmonyLib;
 
 namespace Custom_Soundtrack.ManageTracks
 {
-    [HasGameBasedStaticCache]
+    [HarmonyPatch]
     public class TrackManager
     {
         public List<string> Tracks = null;
@@ -19,7 +19,7 @@ namespace Custom_Soundtrack.ManageTracks
 
         private static string previousTrack = null;
 
-        private static string previousZone = null;
+        public static string previousZone = null;
 
         private static int previousZ;
 
@@ -385,7 +385,6 @@ namespace Custom_Soundtrack.ManageTracks
                 || (Z.DisplayName.Contains("Spindle Channel"))
             )
             {
-                XRL.Messages.MessageQueue.AddPlayerMessage(Z.DisplayName);
                 // Liminal Ways
                 if (Z.DisplayName.Contains("Liminal Way"))
                 {
@@ -393,7 +392,7 @@ namespace Custom_Soundtrack.ManageTracks
                 }
                 else if (Z.DisplayName.Contains("Spindle Channel"))
                 {
-                    toPatch = "true";
+                    toPatch = "yes";
                     Tracks = Tracklist["Tomb_of_the_Eaters_Spindle Channel"];
                 } //Surface - Grand Vestibule and access corridors
                 else if (Z.Z == 10)
@@ -514,7 +513,7 @@ namespace Custom_Soundtrack.ManageTracks
                 } // DESERT CANYON VILLAGE //
                 else if (region == "DesertCanyon")
                 {
-                    Tracks = Tracklist["Random Villages_Desert Canyon"];
+                    Tracks = Tracklist["Random Villages_Desert Canyon village"];
                 } // SALT DUNES VILLAGE //
                 else if (region == "Saltdunes")
                 {
@@ -690,7 +689,7 @@ namespace Custom_Soundtrack.ManageTracks
                 // Strata 1-5
                 if (Z.Z <= 15)
                 {
-                    Tracks = Tracklist["Lairs_The Lair of Oboroqoru, Legendary Ape God"];
+                    Tracks = Tracklist["Lairs_The Lair of Oboroqoru, Legendary Ape God_1-5"];
                 } // Strata 6-8
                 else if (Z.Z <= 18)
                 {
@@ -1147,10 +1146,11 @@ namespace Custom_Soundtrack.ManageTracks
 
         /*
         --<------------- END OF WHERE YOU EDIT --------<----- */
-        public static void Reset()
-        {
-            previousZone = null;
-        }
+        // public static void Reset()
+        // {
+        //     previousZone = null;
+        //     previousTime = DateTime.Now.AddSeconds(tracksMinSeconds);
+        // }
 
         public static bool IsStartingVillage(string villageFaction)
         {
@@ -1197,6 +1197,7 @@ namespace Custom_Soundtrack.ManageTracks
             {
                 return true;
             }
+
             return false;
         }
 
@@ -1207,121 +1208,139 @@ namespace Custom_Soundtrack.ManageTracks
             string trackToPlay;
             string currentZone = Z.ReferenceDisplayName;
 
-            if (Tracks != null)
-            {
-                index = Custom_Soundtrack_Random.Next(0, Tracks.Count - 1);
-                trackToPlay = Tracks[index];
-
-                /* Remove zone modifiers from the string for an accurate
-                compare of ReferenceDisplayName */
-                string[] zoneModifiers =
-                {
-                    "slimy",
-                    "slime-drenched",
-                    "tarry",
-                    "rusty",
-                    "rust-shrouded",
-                    "subterranean",
-                    "outskirts"
-                };
-                foreach (string modifier in zoneModifiers)
-                {
-                    currentZone = currentZone.Replace(modifier, String.Empty);
-                }
-
-                /* Support for Psychic Biomes, that add modifiers tied
-                to mental mutations (check XRL.World.Biomes.PsychicBiome) */
-                if (
-                    Z.GetRegion() == "MoonStair"
-                    || Z.DisplayName.Contains("Stair")
-                    || Z.DisplayName == "Eyn Roj"
-                    || Z.DisplayName.Contains("crystalline roots")
-                )
-                {
-                    List<string> psychicBiomeModifiers = PsychicBiomeMods.psychicBiomeModifiers;
-
-                    foreach (string modifier in psychicBiomeModifiers)
-                    {
-                        currentZone = currentZone.Replace(modifier, String.Empty);
-                    }
-                }
-
-                currentZone = currentZone.Trim(' ');
-
-                /*
-                If a track have been playing for less than tracksMinSeconds
-                seconds, save it and continue playing it. Also we only want to
-                save it when the character stays on the same location. If
-                character goes to another location, clear the previous Track.
-                */
-                if (previousZone != null)
-                {
-                    DateTime currentTime = DateTime.Now;
-                    TimeSpan timeInterval = currentTime - previousTime;
-
-                    if (timeSincePrevious == TimeSpan.Zero)
-                    {
-                        maxTime = previousTime.AddSeconds(tracksMinSeconds);
-                    }
-                    timeSincePrevious += timeInterval;
-
-                    int zSubstrLen = currentZone.Length > 5 ? 5 : currentZone.Length;
-                    int prevSubstrLen = previousZone.Length > 5 ? 5 : previousZone.Length;
-
-                    string formattedPrevZone = previousZone.Substring(0, prevSubstrLen);
-                    string formattedCurZone = currentZone.Substring(0, zSubstrLen);
-
-                    if (formattedPrevZone != formattedCurZone)
-                    {
-                        previousTrack = "";
-                        timeSincePrevious = TimeSpan.Zero;
-                    }
-                    else if (
-                        (currentTime < maxTime || Z.HasBuilder("VillageOutskirts"))
-                        && Tracks.Contains(previousTrack)
-                    )
-                    {
-                        trackToPlay = previousTrack;
-                        isSameTrack = "yes";
-                    }
-                    else
-                    {
-                        if (trackToPlay != previousTrack)
-                        {
-                            timeSincePrevious = TimeSpan.Zero;
-                        }
-                        else
-                        {
-                            isSameTrack = "yes";
-                        }
-                    }
-                }
-
-                // XRL.Messages.MessageQueue.AddPlayerMessage (currentZone);
-                /*
-                ** UNCOMMENT FOUR LINES BELOW IF YOU WANT TO DISPLAY TRACK
-                *  NAMES
-                    (remove the slashes, start at the if, not the line before)
-                */
-                // if (trackToPlay != previousTrack)
-                // {
-                // XRL.Messages.MessageQueue.AddPlayerMessage (trackToPlay);
-                // }
-                trackData = new string[] { trackToPlay, isSameTrack };
-                previousTrack = trackToPlay;
-                previousZone = currentZone;
-                previousZ = Z.Z;
-                previousTime = DateTime.Now;
-                return trackData;
-            }
-            else
+            if (Tracks == null)
             {
                 previousTrack = "default";
                 previousZone = currentZone;
                 previousZ = Z.Z;
                 previousTime = DateTime.Now;
+                isSameTrack = null;
                 return null;
             }
+
+            index = Custom_Soundtrack_Random.Next(0, Tracks.Count - 1);
+            trackToPlay = Tracks[index];
+
+            /* Remove zone modifiers from the string for an accurate
+            compare of ReferenceDisplayName */
+            string[] zoneModifiers =
+            {
+                "slimy",
+                "slime-drenched",
+                "tarry",
+                "rusty",
+                "rust-shrouded",
+                "subterranean",
+                "outskirts"
+            };
+            foreach (string modifier in zoneModifiers)
+            {
+                currentZone = currentZone.Replace(modifier, String.Empty);
+            }
+
+            /* Support for Psychic Biomes, that add modifiers tied
+            to mental mutations (check XRL.World.Biomes.PsychicBiome) */
+            if (
+                Z.GetRegion() == "MoonStair"
+                || Z.DisplayName.Contains("Stair")
+                || Z.DisplayName == "Eyn Roj"
+                || Z.DisplayName.Contains("crystalline roots")
+            )
+            {
+                List<string> psychicBiomeModifiers = PsychicBiomeMods.psychicBiomeModifiers;
+
+                foreach (string modifier in psychicBiomeModifiers)
+                {
+                    currentZone = currentZone.Replace(modifier, String.Empty);
+                }
+            }
+
+            currentZone = currentZone.Trim(' ');
+
+            /*
+            If a track have been playing for less than tracksMinSeconds
+            seconds, save it and continue playing it. Also we only want to
+            save it when the character stays on the same location. If
+            character goes to another location, clear the previous Track.
+            */
+            if (previousZone != null)
+            {
+                DateTime currentTime = DateTime.Now;
+                TimeSpan timeInterval = currentTime - previousTime;
+
+                if (timeSincePrevious == TimeSpan.Zero)
+                {
+                    maxTime = previousTime.AddSeconds(tracksMinSeconds);
+                }
+                timeSincePrevious += timeInterval;
+
+                int zSubstrLen = currentZone.Length > 5 ? 5 : currentZone.Length;
+                int prevSubstrLen = previousZone.Length > 5 ? 5 : previousZone.Length;
+
+                string formattedPrevZone = previousZone.Substring(0, prevSubstrLen);
+                string formattedCurZone = currentZone.Substring(0, zSubstrLen);
+
+                // Switched zones : change track
+                if (formattedPrevZone != formattedCurZone)
+                {
+                    previousTrack = "";
+                    timeSincePrevious = TimeSpan.Zero;
+                    isSameTrack = null;
+                }
+                // Times up, or in village outskirts: keep playing track
+                else if (
+                    (currentTime < maxTime || Z.HasBuilder("VillageOutskirts"))
+                    && Tracks.Contains(previousTrack)
+                )
+                {
+                    trackToPlay = previousTrack;
+                    isSameTrack = "yes";
+                }
+                else
+                {
+                    if (trackToPlay != previousTrack)
+                    {
+                        timeSincePrevious = TimeSpan.Zero;
+                        isSameTrack = null;
+                    }
+                    else
+                    {
+                        isSameTrack = "yes";
+                    }
+                }
+            }
+
+            // XRL.Messages.MessageQueue.AddPlayerMessage (currentZone);
+            /*
+            ** UNCOMMENT FOUR LINES BELOW IF YOU WANT TO DISPLAY TRACK
+            *  NAMES
+                (remove the slashes, start at the if, not the line before)
+            */
+            // if (trackToPlay != previousTrack)
+            // {
+            // XRL.Messages.MessageQueue.AddPlayerMessage (trackToPlay);
+            // }
+            trackData = new string[] { trackToPlay, isSameTrack };
+            previousTrack = trackToPlay;
+            previousZone = currentZone;
+            previousZ = Z.Z;
+            previousTime = DateTime.Now;
+            return trackData;
+        }
+    }
+
+    [HarmonyPatch]
+    public class SaveMenuReset
+    {
+        /*
+          Prevents Continue from keeping main menu music playing by removing
+          cached previous Zone on save
+        */
+        [HarmonyPatch(typeof(XRLGame), nameof(XRLGame.SaveGame))]
+        static bool Prefix()
+        {
+            TrackManager.previousZone = null;
+            return true;
         }
     }
 }

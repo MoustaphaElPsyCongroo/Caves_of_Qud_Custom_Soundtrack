@@ -1,5 +1,6 @@
 using Custom_Soundtrack.ManageTracks;
 using HarmonyLib;
+using XRL;
 using XRL.World;
 using XRL.World.Parts;
 
