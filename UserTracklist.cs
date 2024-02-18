@@ -266,6 +266,10 @@ namespace Custom_Soundtrack.ManageTracks
                 new List<string> { "RedRock_ShirenMD2_TableMountain1" }
             },
             {
+                "Red Rock_3",
+                new List<string> { "RedRock_ShirenMD1SNES_TableMountain3" }
+            },
+            {
                 "Red Rock_4",
                 new List<string> { "RedRock_ShirenMD1SNES_WaterfallCavern" }
             },

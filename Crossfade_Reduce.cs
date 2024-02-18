@@ -8,7 +8,7 @@ namespace Custom_Soundtrack.HarmonyPatches
         [HarmonyPatch(typeof(SoundManager), nameof(SoundManager.PlayMusic))]
         static void Prefix(ref float CrossfadeDuration)
         {
-            CrossfadeDuration = 2.2f; //Default value: 12f
+            CrossfadeDuration = 1.8f; //Default value: 12f
         }
     }
 }

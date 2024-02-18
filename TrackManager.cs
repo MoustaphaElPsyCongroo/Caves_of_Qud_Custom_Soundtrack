@@ -1334,9 +1334,9 @@ namespace Custom_Soundtrack.ManageTracks
     {
         /*
           Prevents Continue from keeping main menu music playing by removing
-          cached previous Zone on save
+          cached previous Zone on game load
         */
-        [HarmonyPatch(typeof(XRLGame), nameof(XRLGame.SaveGame))]
+        [HarmonyPatch(typeof(XRLGame), nameof(XRLGame.LoadGame))]
         static bool Prefix()
         {
             TrackManager.previousZone = null;
