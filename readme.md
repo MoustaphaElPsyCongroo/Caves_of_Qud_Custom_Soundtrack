@@ -25,3 +25,6 @@ immersed in any music. Check mine
 [here](AddYourOwn.md#optional-using-audio-enhancement-software)
 
 Check Credits [here](Credits.md)
+
+## Steam Deck / Linux specific instructions:
+Uncomment [these lines](https://github.com/JupiLogy/Caves_of_Qud_Custom_Soundtrack/blob/b7bbf48886a5c308942dee28167b670a0207a05b/TrackManager.cs#L1319) to make the mod load. Without doing this, you may not hear any of the custom music.
