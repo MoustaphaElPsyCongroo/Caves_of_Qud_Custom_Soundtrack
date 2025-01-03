@@ -6,6 +6,7 @@ using HistoryKit;
 using XRL;
 using XRL.World;
 using HarmonyLib;
+using Qud.API;
 
 namespace Custom_Soundtrack.ManageTracks
 {
@@ -16,6 +17,7 @@ namespace Custom_Soundtrack.ManageTracks
         public static IDictionary<string, List<string>> Tracklist = new UserTrackList().Tracks;
 
         private string toPatch = "";
+        private bool isUnderground = false;
 
         private static string previousTrack = null;
 
@@ -35,10 +37,6 @@ namespace Custom_Soundtrack.ManageTracks
 
         private void SetTrackListFor(Zone Z)
         {
-            /*
-            --<------------- START EDITING AFTER THIS LINE --------<-----
-            */
-            // else
             /*
             *******************************************************
             ******************** NAMED LOCATIONS ******************
@@ -126,14 +124,7 @@ namespace Custom_Soundtrack.ManageTracks
                 } //Ruined Ward
                 else if (Z.Z <= 20)
                 {
-                    if (Z.Z == 16)
-                    {
-                        Tracks = Tracklist["Bethesda Susa_6-10_Ruined Ward_6"];
-                    }
-                    else
-                    {
-                        Tracks = Tracklist["Bethesda Susa_6-10_Ruined Ward_7-10"];
-                    }
+                    Tracks = Tracklist["Bethesda Susa_6-10_Ruined Ward"];
                 } //Abandoned Ward 2
                 else if (Z.Z <= 22)
                 {
@@ -162,99 +153,57 @@ namespace Custom_Soundtrack.ManageTracks
             )
             {
                 Tracks = Tracklist["Charred Tree"];
+            } //---------- //CRADLE OF RERMADON //-----------
+            else if (Z.DisplayName.Contains("cradle of Rermadon"))
+            {
+                Tracks = Tracklist["Girsh Nephilim Cradles_Rermadon"];
+            } //---------- //CRADLE OF SHUG'RUITH //-----------
+            else if (Z.DisplayName.Contains("cradle of Shug'ruith"))
+            {
+                Tracks = Tracklist["Girsh Nephilim Cradles_Shug'ruith"];
+            } //---------- //CRADLE OF QAS AND QON //-----------
+            else if (Z.DisplayName.Contains("chuppah of Qas and Qon"))
+            {
+                Tracks = Tracklist["Girsh Nephilim Cradles_Qas and Qon"];
+            } //---------- //CRADLE OF AGOLGOT //-----------
+            else if (Z.DisplayName.Contains("cradle of Agolgot"))
+            {
+                Tracks = Tracklist["Girsh Nephilim Cradles_Agolgot"];
+            } //---------- //CRADLE OF BETHSAIDA //-----------
+            else if (Z.DisplayName.Contains("cradle of Bethsaida"))
+            {
+                Tracks = Tracklist["Girsh Nephilim Cradles_Bethsaida"];
             } //---------- //EYN ROJ and CRYSTALLINE ROOTS //-----------
             else if (
                 Z.Z <= 50
-                && (Z.DisplayName == "Eyn Roj" || Z.DisplayName.Contains("crystalline roots"))
+                && (
+                    Z.DisplayName.Contains("Eyn Roj") || Z.DisplayName.Contains("crystalline roots")
+                )
             )
             {
                 //Surface
                 if (Z.Z == 10)
                 {
                     Tracks = Tracklist["Eyn Roj and Crystalline Roots_0"];
-                } //Strata 1-4, before intermediate stairs
-                else if (Z.Z <= 14)
-                {
-                    Tracks = Tracklist["Eyn Roj and Crystalline Roots_1-4"];
-                } //Intermediate stairs 1: strata 5, 10, 15, 20
-                else if (Z.Z <= 30 && Z.Z % 5 == 0)
-                {
-                    Tracks = Tracklist[
-                        "Eyn Roj and Crystalline Roots_5, 10, 15, 20_Intermediate stairs 1"
-                    ];
-                } //Strata 6-9
+                } //Strata 1-9
                 else if (Z.Z <= 19)
                 {
-                    //6-7
-                    if (Z.Z <= 17)
-                    {
-                        Tracks = Tracklist["Eyn Roj and Crystalline Roots_6-7"];
-                    } //8-9
-                    else
-                    {
-                        Tracks = Tracklist["Eyn Roj and Crystalline Roots_8-9"];
-                    }
-                } //Strata 11-14
-                else if (Z.Z <= 24)
-                {
-                    Tracks = Tracklist["Eyn Roj and Crystalline Roots_11-14"];
-                } //Strata 16-19
+                    Tracks = Tracklist["Eyn Roj and Crystalline Roots_1-9"];
+                } //Strata 10-19
                 else if (Z.Z <= 29)
                 {
-                    Tracks = Tracklist["Eyn Roj and Crystalline Roots_16-19"];
-                } //Strata 21-24
-                else if (Z.Z <= 34)
-                {
-                    Tracks = Tracklist["Eyn Roj and Crystalline Roots_21-24"];
-                } //Intermediate stairs 2: strata 25, 30, 35, 40
-                else if (Z.Z <= 50 && Z.Z % 5 == 0)
-                {
-                    //Stratum 25
-                    if (Z.Z == 35)
-                    {
-                        Tracks = Tracklist[
-                            "Eyn Roj and Crystalline Roots_25_Intermediate stairs 2"
-                        ];
-                    } //Stratum 30
-                    else if (Z.Z == 40)
-                    {
-                        Tracks = Tracklist[
-                            "Eyn Roj and Crystalline Roots_30_Intermediate stairs 2"
-                        ];
-                    } //Stratum 35
-                    else if (Z.Z == 45)
-                    {
-                        Tracks = Tracklist[
-                            "Eyn Roj and Crystalline Roots_35_Intermediate stairs 2"
-                        ];
-                    } //Stratum 40 - last floor
-                    else if (Z.Z == 50)
-                    {
-                        Tracks = Tracklist["Eyn Roj and Crystalline Roots_40_Last Floor"];
-                    }
-                } //Strata 26-29
+                    Tracks = Tracklist["Eyn Roj and Crystalline Roots_10-19"];
+                } //Strata 20-29
                 else if (Z.Z <= 39)
                 {
-                    //26-27
-                    if (Z.Z <= 37)
-                    {
-                        Tracks = Tracklist["Eyn Roj and Crystalline Roots_26-27"];
-                    } //28-29
-                    else
-                    {
-                        Tracks = Tracklist["Eyn Roj and Crystalline Roots_28-29"];
-                    }
-                } //Strata 31-34
-                else if (Z.Z <= 44)
+                    Tracks = Tracklist["Eyn Roj and Crystalline Roots_20-29"];
+                } //Strata 30-40
+                else if (Z.Z <= 50)
                 {
-                    Tracks = Tracklist["Eyn Roj and Crystalline Roots_31-34"];
-                } //Strata 36-39
-                else if (Z.Z <= 49)
-                {
-                    Tracks = Tracklist["Eyn Roj and Crystalline Roots_36-39"];
+                    Tracks = Tracklist["Eyn Roj and Crystalline Roots_30-40"];
                 }
             } //---------- //EZRA //-----------
-            else if (Z.DisplayName == "Ezra")
+            else if (Z.DisplayName.Contains("Ezra"))
             {
                 Tracks = Tracklist["Ezra"];
             } //---------- //GOLGOTHA //-----------
@@ -334,12 +283,16 @@ namespace Custom_Soundtrack.ManageTracks
                 //Surface
                 if (Z.Z == 10)
                 {
-                    Tracks = Tracklist["Rust Wells"];
+                    Tracks = Tracklist["Rust Wells_0"];
+                }
+                else if (Z.Z == 11)
+                {
+                    Tracks = Tracklist["Rust Wells_1"];
                 }
                 else
                 //Stratum 1 - 4
                 {
-                    Tracks = Tracklist["Rust Wells_1-4"];
+                    Tracks = Tracklist["Rust Wells_2-4"];
                 }
             } //---------- //RUSTED ARCHWAY //-----------
             else if (Z.DisplayName.Contains("rusted archway") && Z.Z <= 14)
@@ -1112,6 +1065,7 @@ namespace Custom_Soundtrack.ManageTracks
             */
             else if (Tracks == null && Z.Z >= 16)
             {
+                isUnderground = true;
                 // Tier 2 (Formula starts at 2)
                 if (Z.NewTier == 2)
                 {
@@ -1143,14 +1097,6 @@ namespace Custom_Soundtrack.ManageTracks
                 }
             }
         }
-
-        /*
-        --<------------- END OF WHERE YOU EDIT --------<----- */
-        // public static void Reset()
-        // {
-        //     previousZone = null;
-        //     previousTime = DateTime.Now.AddSeconds(tracksMinSeconds);
-        // }
 
         public static bool IsStartingVillage(string villageFaction)
         {
@@ -1243,7 +1189,7 @@ namespace Custom_Soundtrack.ManageTracks
             if (
                 Z.GetRegion() == "MoonStair"
                 || Z.DisplayName.Contains("Stair")
-                || Z.DisplayName == "Eyn Roj"
+                || Z.DisplayName.Contains("Eyn Roj")
                 || Z.DisplayName.Contains("crystalline roots")
             )
             {
@@ -1287,10 +1233,15 @@ namespace Custom_Soundtrack.ManageTracks
                     timeSincePrevious = TimeSpan.Zero;
                     isSameTrack = null;
                 }
-                // Times up, or in village outskirts: keep playing track
+                // Times not up, or in village outskirts, or underground while
+                // times not up: keep playing track (necessary for underground
+                // since screens at the same strata can have different tiers,
+                // leading to intempestive music switching)
                 else if (
-                    (currentTime < maxTime || Z.HasBuilder("VillageOutskirts"))
-                    && Tracks.Contains(previousTrack)
+                    (
+                        (currentTime < maxTime || Z.HasBuilder("VillageOutskirts"))
+                        && Tracks.Contains(previousTrack)
+                    ) || (currentTime < maxTime && isUnderground == true)
                 )
                 {
                     trackToPlay = previousTrack;
@@ -1310,7 +1261,7 @@ namespace Custom_Soundtrack.ManageTracks
                 }
             }
 
-            // XRL.Messages.MessageQueue.AddPlayerMessage (currentZone);
+            // XRL.Messages.MessageQueue.AddPlayerMessage(currentZone);
             /*
             ** UNCOMMENT FOUR LINES BELOW IF YOU WANT TO DISPLAY TRACK
             *  NAMES
@@ -1336,7 +1287,7 @@ namespace Custom_Soundtrack.ManageTracks
           Prevents Continue from keeping main menu music playing by removing
           cached previous Zone on game load
         */
-        [HarmonyPatch(typeof(XRLGame), nameof(XRLGame.LoadGame))]
+        [HarmonyPatch(typeof(SaveGameInfo), nameof(SaveGameInfo.TryRestoreModsAndLoadAsync))]
         static bool Prefix()
         {
             TrackManager.previousZone = null;

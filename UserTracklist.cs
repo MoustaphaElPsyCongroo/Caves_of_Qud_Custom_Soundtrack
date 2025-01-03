@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using NUnit.Framework;
 
 namespace Custom_Soundtrack.ManageTracks
 {
@@ -85,22 +86,11 @@ namespace Custom_Soundtrack.ManageTracks
                 new List<string> { "default" }
             },
             {
-                "Bethesda Susa_6-10_Ruined Ward_6",
+                "Bethesda Susa_6-10_Ruined Ward",
                 new List<string>
                 {
-                    "BethesdaSusa_PMDSky_BlizzardIsland",
                     "BethesdaSusa_PMDSky_VastIceMountainPeak",
                     "BethesdaSusa_PMDGTI_GreatGlacierCrystalTower"
-                }
-            },
-            {
-                "Bethesda Susa_6-10_Ruined Ward_7-10",
-                new List<string>
-                {
-                    "BethesdaSusa_PMDSky_BlizzardIsland",
-                    "BethesdaSusa_PMDSky_VastIceMountainPeak",
-                    "BethesdaSusa_PMDGTI_GreatGlacierCrystalTower",
-                    "default"
                 }
             },
             {
@@ -117,7 +107,7 @@ namespace Custom_Soundtrack.ManageTracks
             },
             {
                 "Bethesda Susa_16_Temple of the Rock",
-                new List<string> { "BethesdaSusa_PMDGTI_GreatGlacierWesternSpire", "default" }
+                new List<string> { "BethesdaSusa_PMDGTI_GreatGlacierWesternSpire" }
             },
             {
                 "Bey Lah",
@@ -138,71 +128,46 @@ namespace Custom_Soundtrack.ManageTracks
                 }
             },
             {
+                "Girsh Nephilim Cradles_Rermadon",
+                new List<string>
+                {
+                    "CradleOfRermadon_LibraryOfRuina_TheReverberationEnsembleAsiyah"
+                }
+            },
+            {
+                "Girsh Nephilim Cradles_Shug'ruith",
+                new List<string> { "Lair8_Elona_MesheraAlphaTheDeformedAngel" }
+            },
+            {
+                "Girsh Nephilim Cradles_Qas and Qon",
+                new List<string> { "CradleOfQasAndQon_PMDSky_PalkiaOnslaughRemastered" }
+            },
+            {
+                "Girsh Nephilim Cradles_Agolgot",
+                new List<string> { "HistoricSite1_NieRAutomata_Simone" }
+            },
+            {
+                "Girsh Nephilim Cradles_Bethsaida",
+                new List<string> { "CradleOfBethsaida_TheBindingOfIsaacAntibirth_TerminalLucidity" }
+            },
+            {
                 "Eyn Roj and Crystalline Roots_0",
                 new List<string> { "EynRoj_PSMD_WitheredTreeOfLife" }
             },
             {
-                "Eyn Roj and Crystalline Roots_1-4",
+                "Eyn Roj and Crystalline Roots_1-9",
                 new List<string> { "EynRoj_PSMD_TreeOfLifeRoots" }
             },
             {
-                "Eyn Roj and Crystalline Roots_5, 10, 15, 20_Intermediate stairs 1",
-                new List<string> { "Reflections of Ptoh" }
-            },
-            {
-                "Eyn Roj and Crystalline Roots_6-7",
-                new List<string> { "EynRoj_PMDBRT_SkyTower" }
-            },
-            {
-                "Eyn Roj and Crystalline Roots_8-9",
-                new List<string> { "EynRoj_PMDBRT_SkyTower", "EynRoj_PMDRRT_SkyTower" }
-            },
-            {
-                "Eyn Roj and Crystalline Roots_11-14",
-                new List<string> { "EynRoj_PMDSky_TemporalTower" }
-            },
-            {
-                "Eyn Roj and Crystalline Roots_16-19",
+                "Eyn Roj and Crystalline Roots_10-19",
                 new List<string> { "EynRoj_PMDBRT_SkyTowerRemastered" }
             },
             {
-                "Eyn Roj and Crystalline Roots_21-24",
-                new List<string> { "EynRoj_PMDSky_TemporalTowerRemastered" }
-            },
-            {
-                "Eyn Roj and Crystalline Roots_25_Intermediate stairs 2",
-                new List<string> { "EynRoj_PokemonBDSP_PokémonLeagueNight" }
-            },
-            {
-                "Eyn Roj and Crystalline Roots_26-27",
-                new List<string> { "EynRoj_PMDBRT_SkyTowerSummit" }
-            },
-            {
-                "Eyn Roj and Crystalline Roots_28-29",
-                new List<string>
-                {
-                    "EynRoj_PMDBRT_SkyTowerSummit",
-                    "EynRoj_PMDBRT_SkyTowerSummitRemastered"
-                }
-            },
-            {
-                "Eyn Roj and Crystalline Roots_30_Intermediate stairs 2",
-                new List<string> { "EynRoj_PMDSky_HaveToGetHome" }
-            },
-            {
-                "Eyn Roj and Crystalline Roots_31-34",
+                "Eyn Roj and Crystalline Roots_20-29",
                 new List<string> { "EynRoj_PMDSky_TemporalSpireRemastered" }
             },
             {
-                "Eyn Roj and Crystalline Roots_35_Intermediate stairs 2",
-                new List<string> { "EynRoj_PMDSky_DontEverForget" }
-            },
-            {
-                "Eyn Roj and Crystalline Roots_36-39",
-                new List<string> { "EynRoj_PSMD_TreeOfLifeTrunkRemastered" }
-            },
-            {
-                "Eyn Roj and Crystalline Roots_40_Last Floor",
+                "Eyn Roj and Crystalline Roots_30-40",
                 new List<string> { "EynRoj_PSMD_TreeOfLifeTrunkRemastered" }
             },
             {
@@ -259,7 +224,7 @@ namespace Custom_Soundtrack.ManageTracks
             },
             {
                 "Red Rock_1",
-                new List<string> { "RedRock_ShirenMD1SNES_CavernInTheCliff" }
+                new List<string> { "RedRock_ShirenMD2_CavernInTheCliff" }
             },
             {
                 "Red Rock_2",
@@ -278,12 +243,22 @@ namespace Custom_Soundtrack.ManageTracks
                 new List<string> { "RustWells_ShirenMD1DS_TaintedPath" }
             },
             {
-                "Rust Wells_1-4",
+                "Rust Wells_1",
                 new List<string>
                 {
                     "RustWells_ShirenMD1DS_TaintedPath",
                     "RustWells_PMDGTI_WithinTheCragsOfLament",
-                    "RustWells_CavernsOfXaskazien2_m05"
+                    "RustWells_CavernsOfXaskazien2_m05",
+                    "RustWells_ShirenMD2_IceCave"
+                }
+            },
+            {
+                "Rust Wells_2-4",
+                new List<string>
+                {
+                    "RustWells_PMDGTI_WithinTheCragsOfLament",
+                    "RustWells_CavernsOfXaskazien2_m05",
+                    "RustWells_ShirenMD2_IceCave"
                 }
             },
             {
@@ -300,7 +275,7 @@ namespace Custom_Soundtrack.ManageTracks
             },
             {
                 "Rusted Archway_3",
-                new List<string> { "RustedArchway_PokemonHgSs_Route26-27" }
+                new List<string> { "RustedArchway_PokemonHgSs_Route26" }
             },
             {
                 "Rusted Archway_4",
@@ -390,11 +365,11 @@ namespace Custom_Soundtrack.ManageTracks
             },
             {
                 "Tomb_of_the_Eaters_+4-+5_Sultan Tomb",
-                new List<string> { "TombOfTheEaters_Bach_Concerto5Largo" }
+                new List<string> { "TombOfTheEaters_GaryMoore_TheLoner" }
             },
             {
                 "Tomb_of_the_Eaters_+6-+7_Sultan Tomb",
-                new List<string> { "TombOfTheEaters_GaryMoore_TheLoner" }
+                new List<string> { "TombOfTheEaters_Bach_Concerto5Largo" }
             },
             {
                 "Tomb_of_the_Eaters_+8-+9_Sultan Tomb",
@@ -406,12 +381,7 @@ namespace Custom_Soundtrack.ManageTracks
             },
             {
                 "Thin World",
-                new List<string>
-                {
-                    "ThinWorld_BindingOfIsaacRepented_GuardiansGift",
-                    "ThinWorld_BindingOfIsaacRepented_GuardiansGift",
-                    "default"
-                }
+                new List<string> { "ThinWorld_BindingOfIsaacRepented_GuardiansGift", }
             },
             {
                 "Trembling Dunes",
@@ -463,13 +433,11 @@ namespace Custom_Soundtrack.ManageTracks
                 new List<string>
                 {
                     "VillageStarting_WildARMs_IntoTheWilderness",
+                    "default",
                     "VillageStarting_WildARMs_IntoTheWilderness",
                     "VillageStarting_TouhouGW_TheBulletReporter",
+                    "default",
                     "VillageStarting_WildARMs_IntoTheWilderness",
-                    "VillageStarting_TheLegendsOfHeroes_OpeningSize",
-                    "VillageStarting_WildARMs_IntoTheWilderness",
-                    "VillageStarting_BindingOfIsaacWrathOfTheLamb_Opening",
-                    "VillageStarting_BindingOfIsaacAntibirth_Descent"
                 }
             },
             {
@@ -663,9 +631,8 @@ namespace Custom_Soundtrack.ManageTracks
                 new List<string>
                 {
                     "Lair2_Touhou_FallOfFall",
-                    "Lair2_CastlevaniaDawnOfSorrow_ClocherMaudit",
-                    "Lair2_Touhou_VoileTheMagicalLibrary",
-                    "Lair2_CastlevaniaDawnOfSorrow_ClocherMaudit",
+                    "Lair2_Touhou_Kids Festival~Innocent Treasures",
+                    "Lair2_Touhou_AkyusUntouchedScoreVol5~ThemeOfEasternStory",
                     "Lair2_Touhou_FallOfFall",
                 }
             },
@@ -753,7 +720,6 @@ namespace Custom_Soundtrack.ManageTracks
                 new List<string>
                 {
                     "Lair7_PMDSky_FortuneRavine",
-                    "Lair7_PandoraHearts_Ending1Maze",
                     "Lair7_PMDRTDX_MagmaCavernPit",
                     "Underground_TalesOfMajEyal_Sinestra"
                 }
@@ -772,8 +738,10 @@ namespace Custom_Soundtrack.ManageTracks
                 "Lairs_Tier 8_Moon Stair lairs",
                 new List<string>
                 {
+                    "Lair8_Elona_ZeomeTheFalseProphet",
                     "Lair8_Elona_MesheraAlphaTheDeformedAngel",
                     "Lair8_Elona_ZeomeTheFalseProphet",
+                    "Lair8_TheLegendOfHeroes_HollowLightOfTheSealedLand",
                     "Lair8_TheLegendOfHeroes_HollowLightOfTheSealedLand"
                 }
             },
@@ -838,7 +806,10 @@ namespace Custom_Soundtrack.ManageTracks
                     "Ruins_PMDSky_HiddenHighland",
                     "Ruins_PMDSky_TreeshroudForest",
                     "Ruins_WildARMsAF_AfterTheChaosAndDestruction",
-                    "BeyLah_WildARMsAF_VillageoftheElw"
+                    "BeyLah_WildARMsAF_VillageoftheElw",
+                    "Ruins_WildARMsAF_AfterTheChaosAndDestruction",
+                    "BeyLah_WildARMsAF_VillageoftheElw",
+                    "Ruins_PMDRRT_MtThunderPeak"
                 }
             },
             {
@@ -989,7 +960,6 @@ namespace Custom_Soundtrack.ManageTracks
                 new List<string>
                 {
                     "HistoricSite3_FinalFantasy10_TidusTheme",
-                    "HistoricSite3_FairyTailEnding_LonelyPerson",
                     "HistoricSite3_FinalFantasy10HD_YunasTheme",
                     "HistoricSite3_PMDSky_ForANewLife",
                     "RainbowWood_DivinityOS2_MaraisExsanguesFortJoyBridge"
@@ -1022,7 +992,6 @@ namespace Custom_Soundtrack.ManageTracks
                 new List<string>
                 {
                     "HistoricSite2_NieRAutomata_War&WarVocals",
-                    "HistoricSite2_SteinsGate_Ending1",
                     "HistoricSite2_BindingOfIsaacExcelsior_Ascent",
                     "HistoricSite2_NieRAutomata_ThisCannotContinue"
                 }
@@ -1076,6 +1045,7 @@ namespace Custom_Soundtrack.ManageTracks
                 {
                     "BaroqueRuins_TouhouGW_MysticDream~SnowOrCherryPetal",
                     "BaroqueRuins_Elona_Dungeon14",
+                    "Music/Deep Dawn",
                     "BaroqueRuins_PSMD_PrehistoricRuins",
                     "BaroqueRuins_BindingOfIsaacRepented_Crevice"
                 }
@@ -1247,7 +1217,7 @@ namespace Custom_Soundtrack.ManageTracks
                 "World Map terrain_Palladium Reef terrain_Subterranean",
                 new List<string>
                 {
-                    "PalladiumReef_Elona_Dungeon1-5",
+                    "PalladiumReef_Elona_Dungeon1",
                     "PalladiumReef_PMDBRT_MtFreezePeak",
                     "PalladiumReef_PSMD_DepthsOfTheSubmergedCave"
                 }
@@ -1258,14 +1228,14 @@ namespace Custom_Soundtrack.ManageTracks
                 {
                     "RainbowWood_Tangledeep_MiraiTheHeroine",
                     "RainbowWood_Tangledeep_MysteriesOfTime",
-                    "RainbowWood_Elona_Dungeon6-10"
+                    "RainbowWood_Elona_Dungeon6"
                 }
             },
             {
                 "World Map terrain_Rainbow Woods terrain_Subterranean",
                 new List<string>
                 {
-                    "RainbowWood_Elona_Dungeon5-9",
+                    "RainbowWood_Elona_Dungeon5",
                     "RainbowWood_DivinityOS2_MaraisExsanguesFortJoyBridge",
                     "RainbowWood_BindingOfIsaacRepentance_Stargazer"
                 }
@@ -1292,10 +1262,12 @@ namespace Custom_Soundtrack.ManageTracks
                 "World Map terrain_Ruins terrain_0",
                 new List<string>
                 {
+                    "Music/Deep Dawn",
                     "RuinsRegion_PMDGTI_TyrianMazeInnerChamber",
                     "RuinsRegion_PMDRRT_BuriedRelic",
                     "RuinsRegion_TheBindingOfIsaacAntibirth_FaultLines",
-                    "RuinsRegion_BindingOfIsaacRepented_Sepulchre"
+                    "RuinsRegion_BindingOfIsaacRepented_Sepulchre",
+                    "Music/Deep Dawn"
                 }
             },
             {
@@ -1311,6 +1283,7 @@ namespace Custom_Soundtrack.ManageTracks
                 "World Map terrain_Salt Desert terrain_0",
                 new List<string>
                 {
+                    "SaltDesert_BindingOfIsaacRepented_Predicament",
                     "SaltDesert_PMDSky_QuicksandPit",
                     "SaltDesert_PMDSky_NorthernDesert",
                     "SaltDesert_PMDGTI_WitheredSavannah",
@@ -1396,7 +1369,6 @@ namespace Custom_Soundtrack.ManageTracks
                 new List<string>
                 {
                     "Underground_FinalFantasy4Advance_Zeromus",
-                    "BethesdaSusa_Tangledeep_BanditBattle",
                     "BethesdaSusa_PMDSky_SkyPeakSnowfield",
                     "Underground_PMDSky_SealedRuinPit",
                     "Lair3_CavernsOfXaskazien2_m07",
