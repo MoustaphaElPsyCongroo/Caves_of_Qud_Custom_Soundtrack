@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using Custom_Soundtrack.PsychicBiomeSupport;
 using Custom_Soundtrack.Utilities;
 using HistoryKit;
-using XRL;
+using XRL.UI;
 using XRL.World;
 using HarmonyLib;
 using Qud.API;
@@ -1165,7 +1165,15 @@ namespace Custom_Soundtrack.ManageTracks
             }
 
             index = Custom_Soundtrack_Random.Next(0, Tracks.Count - 1);
-            trackToPlay = Tracks[index];
+
+            if (Options.GetOption("Custom_Soundtrack_Enable") == "Yes")
+            {
+                trackToPlay = Tracks[index];
+            }
+            else
+            {
+                trackToPlay = "default";
+            }
 
             /* Remove zone modifiers from the string for an accurate
             compare of ReferenceDisplayName */

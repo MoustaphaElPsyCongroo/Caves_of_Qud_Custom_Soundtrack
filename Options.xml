@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<options>
+
+	<option ID="Custom_Soundtrack_Enable"
+		DisplayText="Enable the mod. Music will restart dynamically when switching the option"
+		Category="Custom Soundtrack" Type="Checkbox"
+		Default="Yes"></option>
+</options>
