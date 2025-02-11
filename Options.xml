@@ -5,4 +5,8 @@
 		DisplayText="Enable the mod. Music will restart dynamically when switching the option"
 		Category="Custom Soundtrack" Type="Checkbox"
 		Default="Yes"></option>
+	<option ID="Custom_Soundtrack_DisplayTrackNames"
+	DisplayText="Display new track names in the message log when entering a zone."
+		Category="Custom Soundtrack" Type="Checkbox"
+		Default="No"></option>
 </options>

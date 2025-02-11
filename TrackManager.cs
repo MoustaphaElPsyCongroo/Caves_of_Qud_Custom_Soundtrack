@@ -7,6 +7,7 @@ using XRL.UI;
 using XRL.World;
 using HarmonyLib;
 using Qud.API;
+using System.Text;
 
 namespace Custom_Soundtrack.ManageTracks
 {
@@ -19,7 +20,7 @@ namespace Custom_Soundtrack.ManageTracks
         private string toPatch = "";
         private bool isUnderground = false;
 
-        private static string previousTrack = null;
+        public static string previousTrack = null;
 
         public static string previousZone = null;
 
@@ -1275,10 +1276,23 @@ namespace Custom_Soundtrack.ManageTracks
             *  NAMES
                 (remove the slashes, start at the if, not the line before)
             */
-            // if (trackToPlay != previousTrack)
-            // {
-            // XRL.Messages.MessageQueue.AddPlayerMessage (trackToPlay);
-            // }
+            if (
+                trackToPlay != previousTrack
+                && trackToPlay != "default"
+                && Options.GetOption("Custom_Soundtrack_DisplayTrackNames") == "Yes"
+            )
+            {
+                string[] splitTrack = trackToPlay.Split('_');
+                string author = splitTrack[1];
+                string title = splitTrack[2];
+
+                author = Utils.AddSpacesToCapitalizedString(author);
+                title = Utils.AddSpacesToCapitalizedString(title);
+
+                XRL.Messages.MessageQueue.AddPlayerMessage(
+                    "Now playing: " + author + " - " + title
+                );
+            }
             trackData = new string[] { trackToPlay, isSameTrack };
             previousTrack = trackToPlay;
             previousZone = currentZone;

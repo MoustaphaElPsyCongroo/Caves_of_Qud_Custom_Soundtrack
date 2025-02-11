@@ -95,7 +95,7 @@ namespace Custom_Soundtrack.ManageTracks
             },
             {
                 "Bethesda Susa_11-12_Abandoned Ward 2",
-                new List<string> { "BethesdaSusa_PSMD_TreeofLifeTrunk" }
+                new List<string> { "BethesdaSusa_PSMD_TreeOfLifeTrunk" }
             },
             {
                 "Bethesda Susa_13_Cybernetics Ward",
@@ -113,9 +113,9 @@ namespace Custom_Soundtrack.ManageTracks
                 "Bey Lah",
                 new List<string>
                 {
-                    "BeyLah_WildARMs_APersonsWarmth",
+                    "BeyLah_WildArms_APersonsWarmth",
                     "BeyLah_ShirenMD2_BambooVillage",
-                    "BeyLah_WildARMsAF_VillageoftheElw"
+                    "BeyLah_WildArmsAF_VillageoftheElw"
                 }
             },
             {
@@ -144,7 +144,7 @@ namespace Custom_Soundtrack.ManageTracks
             },
             {
                 "Girsh Nephilim Cradles_Agolgot",
-                new List<string> { "HistoricSite1_NieRAutomata_Simone" }
+                new List<string> { "HistoricSite1_NierAutomata_Simone" }
             },
             {
                 "Girsh Nephilim Cradles_Bethsaida",
@@ -200,14 +200,14 @@ namespace Custom_Soundtrack.ManageTracks
             },
             {
                 "Ruins of Joppa",
-                new List<string> { "Joppa_Ruins_WildARMs_AloneInTheWorld" }
+                new List<string> { "Joppa_Ruins_WildArms_AloneInTheWorld" }
             },
             {
                 "Kyakukya",
                 new List<string>
                 {
-                    "Kyakukya_WildARMs_Town",
-                    "Kyakukya_WildARMs_ToTheEndWilderness"
+                    "Kyakukya_WildArms_Town",
+                    "Kyakukya_WildArms_ToTheEndWilderness"
                 }
             },
             {
@@ -305,7 +305,7 @@ namespace Custom_Soundtrack.ManageTracks
             },
             {
                 "Tomb_of_the_Eaters_Liminal Way",
-                new List<string> { "TombOfTheEaters_WildARMs_KishumFlame" }
+                new List<string> { "TombOfTheEaters_WildArms_KishumFlame" }
             },
             {
                 "Tomb_of_the_Eaters_Spindle Channel",
@@ -325,7 +325,7 @@ namespace Custom_Soundtrack.ManageTracks
             },
             {
                 "Tomb_of_the_Eaters_1_Banana grove passage to the tomb",
-                new List<string> { "TombOfTheEaters_WildARMs_KishumFlame" }
+                new List<string> { "TombOfTheEaters_WildArms_KishumFlame" }
             },
             {
                 "Tomb_of_the_Eaters_1_Folk Catacombs",
@@ -432,12 +432,12 @@ namespace Custom_Soundtrack.ManageTracks
                 "Random Villages_Starting village",
                 new List<string>
                 {
-                    "VillageStarting_WildARMs_IntoTheWilderness",
+                    "VillageStarting_WildArms_IntoTheWilderness",
                     "default",
-                    "VillageStarting_WildARMs_IntoTheWilderness",
+                    "VillageStarting_WildArms_IntoTheWilderness",
                     "VillageStarting_TouhouGW_TheBulletReporter",
                     "default",
-                    "VillageStarting_WildARMs_IntoTheWilderness",
+                    "VillageStarting_WildArms_IntoTheWilderness",
                 }
             },
             {
@@ -490,7 +490,7 @@ namespace Custom_Soundtrack.ManageTracks
                 {
                     "VillageBananaGrove_TheLegendOfHeroes_GoInGoodCheer",
                     "VillageBananaGrove_PMDGTI_PokemonParadiseFinal",
-                    "VillageBananaGrove_WildARMsAF_Town"
+                    "VillageBananaGrove_WildArmsAF_Town"
                 }
             },
             {
@@ -761,7 +761,7 @@ namespace Custom_Soundtrack.ManageTracks
                 "Overland Ruins_Tier (0-)1_Salt Marshes ruins",
                 new List<string>
                 {
-                    "Ruins_WildARMs_AfterTheChaosAndDestruction",
+                    "Ruins_WildArms_AfterTheChaosAndDestruction",
                     "Ruins_PMDBRT_MtThunderPeak"
                 }
             },
@@ -769,7 +769,7 @@ namespace Custom_Soundtrack.ManageTracks
                 "Overland Ruins_Tier (0-)1_Desert Canyon ruins",
                 new List<string>
                 {
-                    "Ruins_WildARMs_AfterTheChaosAndDestruction",
+                    "Ruins_WildArms_AfterTheChaosAndDestruction",
                     "Ruins_PMDRRT_MtThunderPeak",
                     "Ruins_PMDRRT_MtThunderPeak"
                 }
@@ -778,7 +778,7 @@ namespace Custom_Soundtrack.ManageTracks
                 "Overland Ruins_Tier (0-)1_Fallback (most likely never used)",
                 new List<string>
                 {
-                    "Ruins_WildARMs_AfterTheChaosAndDestruction",
+                    "Ruins_WildArms_AfterTheChaosAndDestruction",
                     "Ruins_PMDRRT_MtThunderPeak"
                 }
             },
@@ -795,7 +795,7 @@ namespace Custom_Soundtrack.ManageTracks
                 "Overland Ruins_Tier 2_Hills & Salt Desert ruins",
                 new List<string>
                 {
-                    "Ruins_WildARMs_AfterTheChaosAndDestruction",
+                    "Ruins_WildArms_AfterTheChaosAndDestruction",
                     "Ruins_FinalFantasy7_AnxiousHeart"
                 }
             },
@@ -805,10 +805,10 @@ namespace Custom_Soundtrack.ManageTracks
                 {
                     "Ruins_PMDSky_HiddenHighland",
                     "Ruins_PMDSky_TreeshroudForest",
-                    "Ruins_WildARMsAF_AfterTheChaosAndDestruction",
-                    "BeyLah_WildARMsAF_VillageoftheElw",
-                    "Ruins_WildARMsAF_AfterTheChaosAndDestruction",
-                    "BeyLah_WildARMsAF_VillageoftheElw",
+                    "Ruins_WildArmsAF_AfterTheChaosAndDestruction",
+                    "BeyLah_WildArmsAF_VillageoftheElw",
+                    "Ruins_WildArmsAF_AfterTheChaosAndDestruction",
+                    "BeyLah_WildArmsAF_VillageoftheElw",
                     "Ruins_PMDRRT_MtThunderPeak"
                 }
             },
@@ -818,14 +818,14 @@ namespace Custom_Soundtrack.ManageTracks
                 {
                     "Ruins_ChocoboEB_GuardianWater1",
                     "Ruins_BindingOfIsaacRepentance_RiverOfDespair",
-                    "Ruins_WildARMs_AfterTheChaosAndDestruction"
+                    "Ruins_WildArms_AfterTheChaosAndDestruction"
                 }
             },
             {
                 "Overland Ruins_Tier 3-4_Mountains ruins",
                 new List<string>
                 {
-                    "Ruins_WildARMsAF_AfterTheChaosAndDestruction",
+                    "Ruins_WildArmsAF_AfterTheChaosAndDestruction",
                     "Ruins_PMDSky_HiddenHighland",
                     "Ruins_Bleach_NothingCanBeExplainedVocal"
                 }
@@ -842,7 +842,7 @@ namespace Custom_Soundtrack.ManageTracks
                 "Overland Ruins_Tier 5-6_Deep Jungle & Banana Grove ruins",
                 new List<string>
                 {
-                    "Ruins_WildARMsAF_AfterTheChaosAndDestruction",
+                    "Ruins_WildArmsAF_AfterTheChaosAndDestruction",
                     "Ruins_PMDSky_HiddenHighlandRemastered",
                     "Ruins_Bleach_NothingCanBeExplained"
                 }
@@ -888,7 +888,7 @@ namespace Custom_Soundtrack.ManageTracks
                 "Historic Sites_5th Period, Tier 2_Flower Fields historic sites",
                 new List<string>
                 {
-                    "Joppa_Ruins_WildARMs_AloneInTheWorld",
+                    "Joppa_Ruins_WildArms_AloneInTheWorld",
                     "HistoricSite5-1_Mozart_Lacrimosa",
                     "HistoricSite5-1_DivinityOS2_PathOfTheGodwoken",
                     "HistoricSite5-1_MozartPianoConcerto23Adagio"
@@ -898,7 +898,7 @@ namespace Custom_Soundtrack.ManageTracks
                 "Historic Sites_5th Period, Tier 2_Salt Desert & Hills historic sites",
                 new List<string>
                 {
-                    "HistoricSite5-2_NieRAutomata_MemoriesOfDust",
+                    "HistoricSite5-2_NierAutomata_MemoriesOfDust",
                     "HistoricSite5-2_ShirenMD3_InnerKarakuriMansion",
                     "HistoricSite5-2_PMDRRT_GreatCanyonRemastered2"
                 }
@@ -937,7 +937,7 @@ namespace Custom_Soundtrack.ManageTracks
                 "Historic Sites_4th Period, Tiers 3-4_Rivers historic sites",
                 new List<string>
                 {
-                    "Rivers_NieRAutomata_CityRuinsRaysOfLightVocal",
+                    "Rivers_NierAutomata_CityRuinsRaysOfLightVocal",
                     "HistoricSite4_Parano_MrLEV12Part1",
                     "Underground_BindingOfIsaacAntibirth_Morphine",
                     "HistoricSite4_Beethoven_Concerto5Emperor2ndMovement"
@@ -952,7 +952,7 @@ namespace Custom_Soundtrack.ManageTracks
                     "RuinsRegion_TalesOfMajEyal_Mystery",
                     "HistoricSite3_PMDSky_ForANewLife",
                     "HistoricSite3_Bleach_ARequiem",
-                    "HistoricSite3_NieRAutomata_VagueHope"
+                    "HistoricSite3_NierAutomata_VagueHope"
                 }
             },
             {
@@ -991,9 +991,9 @@ namespace Custom_Soundtrack.ManageTracks
                 "Historic Sites_2nd Period, Tier 7_Baroque Ruins historic sites",
                 new List<string>
                 {
-                    "HistoricSite2_NieRAutomata_War&WarVocals",
+                    "HistoricSite2_NierAutomata_War&WarVocals",
                     "HistoricSite2_BindingOfIsaacExcelsior_Ascent",
-                    "HistoricSite2_NieRAutomata_ThisCannotContinue"
+                    "HistoricSite2_NierAutomata_ThisCannotContinue"
                 }
             },
             {
@@ -1012,12 +1012,12 @@ namespace Custom_Soundtrack.ManageTracks
                 "Historic Sites_1st Period, Tier 8_Moon Stair historic sites",
                 new List<string>
                 {
-                    "HistoricSite1_NieRAutomata_Simone",
-                    "HistoricSite1_NieRAutomata_TheWeightOfTheWorldJapanese",
-                    "HistoricSite1_NieRAutomata_Simone",
+                    "HistoricSite1_NierAutomata_Simone",
+                    "HistoricSite1_NierAutomata_TheWeightOfTheWorldJapanese",
+                    "HistoricSite1_NierAutomata_Simone",
                     "HistoricSite1_FinalFantasy10_SutekiDaNe",
                     "HistoricSite1_TheLegendOfHeroes_TheWhereaboutsOfLight",
-                    "HistoricSite1_NieRAutomata_Simone"
+                    "HistoricSite1_NierAutomata_Simone"
                 }
             },
             {
@@ -1169,7 +1169,7 @@ namespace Custom_Soundtrack.ManageTracks
                 {
                     "MoonStair_FinalFantasy7_YouCanHearTheCryOfThePlanetRemix",
                     "MoonStair_FinalFantasy7_ThoseChosenByThePlanetRemastered",
-                    "BethesdaSusa_PSMD_TreeofLifeTrunk",
+                    "BethesdaSusa_PSMD_TreeOfLifeTrunk",
                     "MoonStair_BindingOfIsaacRepented_Incision",
                     "default"
                 }
@@ -1184,7 +1184,7 @@ namespace Custom_Soundtrack.ManageTracks
                 {
                     "MoonStair_FinalFantasy7_ThoseChosenByThePlanetRemastered2",
                     "MoonStair_PMDBRT_MtThunderPeakRemastered",
-                    "BethesdaSusa_PSMD_TreeofLifeTrunk"
+                    "BethesdaSusa_PSMD_TreeOfLifeTrunk"
                 }
             },
             {
@@ -1245,7 +1245,7 @@ namespace Custom_Soundtrack.ManageTracks
                 new List<string>
                 {
                     "Rivers_CastlevaniaCurseOfDarkness_MortviaFountain",
-                    "Rivers_NieRAutomata_CityRuinsRaysOfLightVocal",
+                    "Rivers_NierAutomata_CityRuinsRaysOfLightVocal",
                     "Rivers_FinalFantasy10HD_SilenceBeforeTheStorm",
                     "Rivers_BindingOfIsaacRepented_ParishedExistence"
                 }
@@ -1255,7 +1255,7 @@ namespace Custom_Soundtrack.ManageTracks
                 new List<string>
                 {
                     "Rivers_CastlevaniaCurseOfDarkness_GaribaldiCourtyard",
-                    "Rivers_NieRAutomata_CityRuinsRaysOfLight"
+                    "Rivers_NierAutomata_CityRuinsRaysOfLight"
                 }
             },
             {
